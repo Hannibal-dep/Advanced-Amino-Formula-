@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6edfc 100%);
             color: #1a2c3e;
             line-height: 1.5;
         }
@@ -87,7 +87,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+            background: #ffffff;
             border-radius: 32px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             margin-bottom: 48px;
@@ -260,14 +260,13 @@
             color: #4b5563;
         }
 
-        /* Trust Seals Section */
+        /* Trust Seals Section - EXACTLY LIKE THE IMAGE */
         .trust-seals {
             background: #ffffff;
             border-radius: 32px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             padding: 48px;
             margin-bottom: 48px;
-            text-align: center;
             border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
@@ -275,6 +274,7 @@
             font-size: 32px;
             margin-bottom: 40px;
             color: #1e3a8a;
+            text-align: center;
         }
 
         .seals-grid {
@@ -317,13 +317,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #eff6ff;
+            background: #ffffff;
             border-radius: 50%;
         }
 
         .seal-icon img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
         }
 
@@ -833,6 +833,31 @@
             font-size: 12px;
             color: #fff;
         }
+
+        /* Live Activity Indicator */
+        .live-activity {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -888,34 +913,41 @@
                 </div>
             </div>
 
-            <!-- Trust Seals Section with Flags and Images -->
+            <!-- Trust Seals Section - EXACTLY LIKE THE REFERENCE IMAGE -->
             <div class="trust-seals">
                 <h2>Premium Quality You Can Trust</h2>
                 <div class="seals-grid">
+                    <!-- Made In USA with USA Flag -->
                     <div class="seal-card">
                         <div class="seal-icon">
-                            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" style="width: 50px; border-radius: 4px;">
+                            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" style="width: 55px; border-radius: 8px;">
                         </div>
                         <h3>Made In USA</h3>
-                        <p>Our Advanced Amino Formula is proudly manufactured in the United States with the highest quality standards.</p>
+                        <p>Our Advanced Amino Formula 100% natural supplement is proudly made in the United States of America.</p>
                     </div>
+                    
+                    <!-- GMP Certified with Certificate Icon -->
                     <div class="seal-card">
                         <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1903/1903426.png" alt="GMP Certification" style="width: 45px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1903/1903426.png" alt="GMP Certification" style="width: 50px;">
                         </div>
                         <h3>GMP Certified</h3>
-                        <p>Certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
+                        <p>This product has been certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
                     </div>
+                    
+                    <!-- FDA Approved with FDA Icon -->
                     <div class="seal-card">
                         <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="FDA Approved" style="width: 45px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="FDA Approved" style="width: 50px;">
                         </div>
                         <h3>FDA Registered</h3>
-                        <p>Formulated in an FDA-registered facility following all FDA regulations and guidelines.</p>
+                        <p>Advanced Amino Formula is formulated in a facility registered with FDA & follows all FDA regulations.</p>
                     </div>
+                    
+                    <!-- 100% Natural with Leaf Icon -->
                     <div class="seal-card">
                         <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3106/3106786.png" alt="100% Natural" style="width: 45px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3106/3106786.png" alt="100% Natural" style="width: 50px;">
                         </div>
                         <h3>100% Natural</h3>
                         <p>Made with all-natural, non-GMO, and gluten-free ingredients. No artificial additives.</p>
@@ -979,47 +1011,53 @@
                 </div>
             </div>
 
-            <!-- Testimonials Section with Photos -->
+            <!-- Testimonials Section with Photos and Live Activity -->
             <div class="testimonials-section">
+                <div style="display: flex; justify-content: center; margin-bottom: 24px;">
+                    <div class="live-activity">
+                        <div class="pulse"></div>
+                        <span>12 people bought in the last hour</span>
+                    </div>
+                </div>
                 <h2>What Our <span>Happy Customers</span> Are Saying</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Johnson" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Olivia" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I've been using Advanced Amino for 3 months now. My memory has improved dramatically and I feel more energetic throughout the day. Best investment in my health!"</p>
-                        <p class="testimonial-author">– Sarah Johnson</p>
-                        <p class="testimonial-location">📍 New York, USA | Age 34</p>
+                        <p class="testimonial-author">– Olivia from Ohio</p>
+                        <p class="testimonial-location">Purchased 6 bottles of Advanced Amino Formula™</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Robert Miller" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Robert" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"As a 62-year-old athlete, I was losing muscle and struggling with focus. This supplement changed everything. More energy, better focus, and I'm stronger than ever!"</p>
                         <p class="testimonial-author">– Robert Miller</p>
                         <p class="testimonial-location">📍 London, UK | Age 62</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria Garcia" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"My concentration at work has never been better. No more brain fog, and I'm actually remembering things I used to forget. Highly recommend!"</p>
                         <p class="testimonial-author">– Maria Garcia</p>
                         <p class="testimonial-location">📍 Madrid, Spain | Age 41</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chen" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I'm a university student and this supplement helped me focus during exams. My grades improved and I feel sharper than ever. Worth every penny!"</p>
                         <p class="testimonial-author">– David Chen</p>
                         <p class="testimonial-location">📍 Toronto, Canada | Age 22</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="James Wilson" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="James" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"At 68, I thought memory loss was inevitable. This product proved me wrong. My mind is clearer, I'm more active, and I feel 10 years younger!"</p>
                         <p class="testimonial-author">– James Wilson</p>
                         <p class="testimonial-location">📍 Sydney, Australia | Age 68</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Patricia Santos" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Patricia" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I bought the 6-bottle package and I'm so glad I did. My energy levels are consistent, my workouts are better, and my memory is sharp. Amazing product!"</p>
                         <p class="testimonial-author">– Patricia Santos</p>
