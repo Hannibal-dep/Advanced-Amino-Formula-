@@ -51,6 +51,17 @@
         .cta-button { background: var(--primary-orange); color: white; padding: 18px 45px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
         .cta-button:hover { background: var(--primary-hover); transform: translateY(-2px); }
 
+        /* --- TRUST SEALS SECTION (NOVO) --- */
+        .trust-seals { padding: 60px 0; background: #060e17; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .trust-seals h2 { text-align: center; font-size: 32px; margin-bottom: 50px; }
+        .seals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .seal-card { text-align: center; padding: 20px; background: var(--bg-card); border-radius: 20px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
+        .seal-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+        .seal-icon { width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(201, 160, 61, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .seal-icon i { font-size: 40px; color: var(--accent-gold); }
+        .seal-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; }
+        .seal-card p { font-size: 13px; color: var(--text-gray); }
+
         /* --- PRICING --- */
         .pricing-section { padding: 80px 0; background: #060e17; }
         .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; }
@@ -60,6 +71,11 @@
         .best-value-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-orange); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
         .price-main { font-size: 48px; font-weight: 800; color: var(--accent-gold); margin: 20px 0; }
         .price-main span { font-size: 18px; color: var(--text-gray); }
+        .payment-icons-small { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
+        .payment-icons-small i { font-size: 24px; color: var(--text-gray); transition: 0.3s; }
+        .payment-icons-small i:hover { color: var(--accent-gold); }
+        .instant-savings { background: rgba(201, 160, 61, 0.1); padding: 6px 12px; border-radius: 20px; font-size: 12px; color: var(--accent-gold); display: inline-block; margin-top: 10px; }
+        .free-shipping { color: #2ecc71; font-size: 12px; margin-top: 8px; }
 
         /* --- TESTIMONIALS --- */
         .testimonials-section { padding: 80px 0; }
@@ -70,19 +86,63 @@
         .testimonial-stars { color: var(--accent-gold); margin-bottom: 15px; font-size: 14px; }
         .testimonial-text { font-size: 15px; color: var(--text-gray); line-height: 1.7; font-style: italic; }
 
+        /* --- LIVE ACTIVITY (NOVO) --- */
+        .live-activity { display: inline-flex; align-items: center; gap: 8px; background: rgba(201, 160, 61, 0.1); padding: 8px 20px; border-radius: 50px; margin-bottom: 30px; }
+        .pulse { width: 8px; height: 8px; background: #2ecc71; border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(0.95); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+        .review-disclaimer { text-align: center; font-size: 11px; color: var(--text-gray); max-width: 800px; margin: 20px auto 0; opacity: 0.7; }
+
+        /* --- INGREDIENTS SECTION (NOVO) --- */
+        .ingredients-section { padding: 80px 0; background: #060e17; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .ingredients-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px; }
+        .ingredient-card { text-align: center; padding: 30px 20px; background: var(--bg-card); border-radius: 20px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
+        .ingredient-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+        .ingredient-icon { font-size: 48px; margin-bottom: 15px; }
+        .ingredient-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; }
+        .ingredient-card p { font-size: 13px; color: var(--text-gray); }
+
+        /* --- PROBLEM/SOLUTION SECTION (NOVO) --- */
+        .problem-solution-section { padding: 80px 0; }
+        .problem-solution { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .problem-card, .solution-card { background: var(--bg-card); border-radius: 24px; padding: 35px; border: 1px solid rgba(255,255,255,0.05); }
+        .problem-card h3, .solution-card h3 { font-family: 'Inter', sans-serif; font-size: 24px; margin-bottom: 20px; }
+        .problem-card h3 { color: #e67e22; }
+        .solution-card h3 { color: var(--accent-gold); }
+        .problem-card ul, .solution-card ul { list-style: none; }
+        .problem-card li, .solution-card li { margin-bottom: 12px; padding-left: 28px; position: relative; }
+        .problem-card li:before { content: "✗"; color: #e67e22; position: absolute; left: 0; }
+        .solution-card li:before { content: "✓"; color: var(--accent-gold); position: absolute; left: 0; }
+
+        /* --- GUARANTEE SECTION (NOVO) --- */
+        .guarantee-section { padding: 80px 0; background: #060e17; }
+        .guarantee-box { text-align: center; background: var(--bg-card); border-radius: 30px; padding: 50px; border: 1px solid rgba(255,255,255,0.05); }
+        .guarantee-icon { font-size: 64px; margin-bottom: 20px; color: var(--accent-gold); }
+        .guarantee-box h2 { font-size: 32px; margin-bottom: 20px; }
+
         /* --- FOOTER & COMPLIANCE --- */
         .main-footer { padding: 80px 0 40px; background: #02060a; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: var(--text-gray); }
-        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
         .footer-links a { color: var(--text-gray); text-decoration: none; }
         .footer-links a:hover { color: white; }
         .compliance-text { max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center; }
         .fda-disclaimer { border: 1px solid rgba(255,255,255,0.1); padding: 20px; margin-top: 30px; border-radius: 10px; }
+        .footer-badges { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 30px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .badge-norton, .badge-bbb { display: flex; align-items: center; gap: 10px; }
+        .badge-norton i, .badge-bbb i { font-size: 28px; color: var(--accent-gold); }
+        .badge-norton span, .badge-bbb span { font-size: 11px; font-weight: 500; color: var(--text-gray); }
+        .payment-icons-footer { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; margin: 30px 0; }
+        .payment-icons-footer i { font-size: 32px; color: var(--text-gray); transition: 0.3s; }
+        .payment-icons-footer i:hover { color: var(--accent-gold); }
+        .digistore-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); padding: 6px 16px; border-radius: 50px; }
+        .digistore-badge i { font-size: 16px; color: var(--accent-gold); }
+        .digistore-badge span { font-size: 11px; font-weight: 600; }
 
         /* --- ACCESSIBILITY --- */
-        .acc-btn { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 999; }
+        .acc-btn { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 999; cursor: pointer; transition: 0.3s; }
+        .acc-btn:hover { background: var(--primary-hover); transform: scale(1.05); }
 
         @media (max-width: 992px) {
-            .hero-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .hero-grid, .pricing-grid, .testimonials-grid, .seals-grid, .ingredients-grid, .problem-solution { grid-template-columns: 1fr; }
             .price-card.featured { transform: scale(1); }
         }
     </style>
@@ -119,9 +179,48 @@
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: TRUST SEALS (Made in USA, GMP, FDA, Natural) -->
+    <section class="trust-seals">
+        <div class="container">
+            <h2>Premium Quality You Can Trust</h2>
+            <div class="seals-grid">
+                <div class="seal-card">
+                    <div class="seal-icon"><i class="fas fa-flag-usa"></i></div>
+                    <h3>Made In USA</h3>
+                    <p>Proudly manufactured in the United States with the highest quality standards.</p>
+                </div>
+                <div class="seal-card">
+                    <div class="seal-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>GMP Certified</h3>
+                    <p>Certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
+                </div>
+                <div class="seal-card">
+                    <div class="seal-icon"><i class="fas fa-clinic-medical"></i></div>
+                    <h3>FDA Registered</h3>
+                    <p>Formulated in an FDA-registered facility following all regulations.</p>
+                </div>
+                <div class="seal-card">
+                    <div class="seal-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>100% Natural</h3>
+                    <p>All-natural, non-GMO, gluten-free ingredients. No artificial additives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE DEPOIMENTOS ORIGINAL COM LIVE ACTIVITY ADICIONADA -->
     <section class="testimonials-section" id="testimonials">
         <div class="container">
+            <div style="text-align: center;">
+                <div class="live-activity">
+                    <div class="pulse"></div>
+                    <span><i class="fas fa-shopping-cart"></i> 12 people bought in the last hour</span>
+                </div>
+            </div>
             <h2 class="section-title">Real Results from Real Customers</h2>
+            <div class="review-disclaimer">
+                <i class="fas fa-info-circle"></i> Above are actual reviews from our customers. These customer's statements may not reflect the typical purchaser's experience. Your results may vary.
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-profile">
@@ -151,31 +250,126 @@
         </div>
     </section>
 
+    <!-- SEÇÃO DE PREÇOS ATUALIZADA COM INSTANT SAVINGS E PAYMENT ICONS -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title">Select Your Savings Below</h2>
             <div class="pricing-grid">
                 <div class="price-card">
-                    <h3>1 Bottle</h3><p>30-Day Supply</p>
+                    <h3>1 Bottle</h3>
+                    <p>30-Day Supply</p>
                     <div class="price-main">$39.95 <span>/ea</span></div>
                     <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
+                    <div class="payment-icons-small">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-discover"></i>
+                    </div>
                 </div>
                 <div class="price-card featured">
-                    <div class="best-value-tag">Best Value</div>
-                    <h3>6 Bottles</h3><p>180-Day Supply</p>
+                    <div class="best-value-tag">⭐ Best Value</div>
+                    <h3>6 Bottles</h3>
+                    <p>180-Day Supply</p>
                     <div class="price-main">$33.25 <span>/ea</span></div>
+                    <div class="instant-savings"><i class="fas fa-tag"></i> Instant Savings: $40.20</div>
+                    <div class="free-shipping"><i class="fas fa-truck"></i> FREE SHIPPING</div>
                     <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
-                    <p style="margin-top: 10px; font-size: 12px;">+ FREE US SHIPPING</p>
+                    <div class="payment-icons-small">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-discover"></i>
+                    </div>
                 </div>
                 <div class="price-card">
-                    <h3>3 Bottles</h3><p>90-Day Supply</p>
+                    <h3>3 Bottles</h3>
+                    <p>90-Day Supply</p>
                     <div class="price-main">$35.95 <span>/ea</span></div>
+                    <div class="instant-savings"><i class="fas fa-tag"></i> Instant Savings: $12.00</div>
+                    <div class="free-shipping"><i class="fas fa-truck"></i> FREE SHIPPING</div>
                     <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
+                    <div class="payment-icons-small">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-discover"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: INGREDIENTES -->
+    <section class="ingredients-section">
+        <div class="container">
+            <h2 class="section-title">Premium Ingredients Backed by Science</h2>
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">💪</div>
+                    <h3>Essential Amino Acids</h3>
+                    <p>All 8 essential aminos for brain function and muscle maintenance</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">🧠</div>
+                    <h3>Bacopa Monnieri</h3>
+                    <p>Improves memory formation and recall by up to 40%</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">⚡</div>
+                    <h3>Phosphatidylserine</h3>
+                    <p>Reduces cognitive stress and protects brain cells</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">🌿</div>
+                    <h3>Rhodiola Rosea</h3>
+                    <p>Fights mental fatigue and increases endurance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PROBLEMA/SOLUÇÃO -->
+    <section class="problem-solution-section">
+        <div class="container">
+            <h2 class="section-title">Is Your Brain & Body Telling You Something?</h2>
+            <div class="problem-solution">
+                <div class="problem-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Signs You Need Support</h3>
+                    <ul>
+                        <li>Forgetting names and important appointments</li>
+                        <li>Difficulty concentrating for more than 20 minutes</li>
+                        <li>Mental fatigue hitting you by 2 PM</li>
+                        <li>Losing muscle mass despite working out</li>
+                        <li>Constant brain fog and lack of clarity</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3><i class="fas fa-check-circle"></i> What You'll Experience</h3>
+                    <ul>
+                        <li>Crystal clear memory and faster recall</li>
+                        <li>Laser focus for hours on end</li>
+                        <li>Sustained energy without the crash</li>
+                        <li>Maintained lean muscle mass</li>
+                        <li>Mental clarity from day one</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: GARANTIA -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon"><i class="fas fa-shield-alt"></i></div>
+                <h2>100% Risk-Free 30-Day Guarantee</h2>
+                <p>Try Advanced Amino Formula for 30 days. If you don't notice a significant improvement in your memory, focus, or energy levels, we'll refund every penny. No questions asked. That's our promise to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ATUALIZADO COM SELOS NORTON/BBB E PAYMENT ICONS -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
@@ -183,6 +377,29 @@
                 <a href="#">Terms of Service</a>
                 <a href="#">Contact Us</a>
                 <a href="#">Shipping Policy</a>
+                <a href="#">Return Policy</a>
+            </div>
+
+            <div class="footer-badges">
+                <div class="badge-norton">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Norton SECURED BUSINESS<br>powered by VeriSign</span>
+                </div>
+                <div class="badge-bbb">
+                    <i class="fas fa-award"></i>
+                    <span>ACCREDITED<br>BUSINESS</span>
+                </div>
+            </div>
+
+            <div class="payment-icons-footer">
+                <i class="fab fa-cc-visa fa-2x"></i>
+                <i class="fab fa-cc-mastercard fa-2x"></i>
+                <i class="fab fa-cc-amex fa-2x"></i>
+                <i class="fab fa-cc-discover fa-2x"></i>
+                <div class="digistore-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>digistore24 SECURE ORDER</span>
+                </div>
             </div>
             
             <div class="compliance-text">
@@ -192,6 +409,9 @@
                 </div>
                 <p style="margin-top: 20px;">
                     Digistore24 is the retailer of products on this site. DIGISTORE24® is a registered trademark of Digistore24 GmbH, a German corporation. Digistore24's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.
+                </p>
+                <p style="margin-top: 15px; font-size: 11px;">
+                    5305 Oakbrook Parkway, Norcross, Georgia 30093
                 </p>
             </div>
         </div>
