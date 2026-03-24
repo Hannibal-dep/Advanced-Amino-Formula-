@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Advanced Amino Formula | Premium Cognitive & Muscle Support</title>
-    <meta name="description" content="Scientifically formulated amino acid complex for memory, focus, and muscle maintenance. 30-day money-back guarantee. Trusted by thousands.">
+    <title>Advanced Amino Formula | Premium Cognitive Support</title>
+    <meta name="description" content="Clinically formulated amino acid complex for memory, focus, and muscle maintenance. 30-day money-back guarantee. Trusted by thousands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,25 +16,37 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #eef2f8 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafbfd;
             color: #1a2c3e;
             line-height: 1.5;
+            scroll-behavior: smooth;
         }
-
-        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
 
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 32px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
         }
 
         /* Header */
         .header {
-            background: #ffffff;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            padding: 16px 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,42 +57,48 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 20px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1e3a8a;
-            letter-spacing: -0.5px;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .logo span {
-            color: #3b82f6;
+        .logo sup {
+            font-size: 12px;
+            -webkit-text-fill-color: #2c5282;
+            color: #2c5282;
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 32px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #4b5563;
+            color: #4a5568;
             font-size: 14px;
             font-weight: 500;
             transition: color 0.3s;
+            letter-spacing: 0.01em;
         }
 
         .nav-links a:hover {
-            color: #1e3a8a;
+            color: #1e3a5f;
         }
 
         .trust-badge {
             display: flex;
             gap: 24px;
             font-size: 13px;
-            color: #4b5563;
+            color: #4a5568;
         }
 
         .trust-badge span {
@@ -87,20 +108,9 @@
         }
 
         @media (max-width: 768px) {
-            .trust-badge {
-                font-size: 11px;
-                gap: 16px;
-            }
-            .nav-links {
-                gap: 16px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .header .container {
-                justify-content: center;
-                text-align: center;
-                flex-direction: column;
-            }
+            .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+            .trust-badge { font-size: 11px; gap: 16px; }
+            .header .container { flex-direction: column; text-align: center; }
         }
 
         /* Main */
@@ -110,58 +120,80 @@
 
         /* Hero Section */
         .hero {
-            background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            margin-bottom: 48px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafd 100%);
+            border-radius: 48px;
+            margin-bottom: 60px;
+            padding: 56px;
+            position: relative;
             overflow: hidden;
-            padding: 48px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(30, 58, 95, 0.02) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                padding: 32px 24px;
-            }
+            .hero { padding: 32px 24px; border-radius: 32px; }
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge-top {
+            display: inline-block;
+            background: #e8f0fe;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
         }
 
         .hero-content h1 {
-            font-size: 52px;
-            font-weight: 800;
+            font-size: 56px;
+            font-weight: 700;
             line-height: 1.2;
             margin-bottom: 24px;
-            letter-spacing: -1px;
-            color: #1e3a8a;
+            color: #0a2540;
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 36px;
-            }
+            .hero-content h1 { font-size: 36px; }
         }
 
         .hero-content .highlight {
-            color: #3b82f6;
+            background: linear-gradient(135deg, #1e3a5f 0%, #3b6e9e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Product Image */
         .product-image {
             text-align: center;
-            margin: 32px 0;
+            margin: 32px 0 24px;
         }
 
         .product-image img {
             width: 100%;
-            max-width: 280px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            max-width: 260px;
+            filter: drop-shadow(0 20px 25px -5px rgba(0, 0, 0, 0.1));
+            transition: transform 0.4s ease;
         }
 
         .product-image img:hover {
@@ -177,151 +209,157 @@
         }
 
         .badge {
-            background: #eff6ff;
-            padding: 6px 16px;
+            background: #f1f5f9;
+            padding: 6px 14px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 500;
-            color: #1e3a8a;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #1e3a5f;
         }
 
         .subtitle {
             font-size: 18px;
-            color: #4b5563;
-            margin-bottom: 28px;
+            color: #4a5568;
+            margin-bottom: 32px;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 680px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .benefits {
             list-style: none;
-            margin-bottom: 32px;
-            display: inline-block;
+            margin-bottom: 36px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
             text-align: left;
         }
 
+        @media (max-width: 560px) {
+            .benefits { grid-template-columns: 1fr; }
+        }
+
         .benefits li {
-            margin-bottom: 14px;
             padding-left: 28px;
             position: relative;
-            color: #1f2937;
-            font-size: 16px;
+            color: #2d3e50;
+            font-size: 15px;
+            font-weight: 500;
         }
 
         .benefits li:before {
             content: "✓";
-            color: #3b82f6;
+            color: #1e3a5f;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             position: absolute;
             left: 0;
+            background: #e8f0fe;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
         }
 
-        /* Trust Seals Section */
+        /* Trust Seals */
         .trust-seals {
             background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            padding: 48px;
-            margin-bottom: 48px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 48px;
+            padding: 56px 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .trust-seals h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #1e3a8a;
+            font-size: 28px;
             text-align: center;
+            margin-bottom: 48px;
+            color: #0a2540;
+            font-weight: 500;
         }
 
         .seals-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+            gap: 40px;
         }
 
         @media (max-width: 992px) {
-            .seals-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .seals-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
         }
-
         @media (max-width: 576px) {
-            .seals-grid {
-                grid-template-columns: 1fr;
-            }
+            .seals-grid { grid-template-columns: 1fr; }
         }
 
         .seal-card {
             text-align: center;
-            padding: 28px 20px;
-            background: #f8fafc;
-            border-radius: 20px;
+            padding: 24px;
             transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-
-        .seal-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-color: #3b82f6;
         }
 
         .seal-icon {
             width: 80px;
             height: 80px;
-            margin: 0 auto 16px;
+            margin: 0 auto 20px;
+            background: #f8fafc;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #ffffff;
-            border-radius: 50%;
+            transition: all 0.3s;
         }
 
         .seal-icon img {
-            width: 60px;
-            height: 60px;
+            width: 48px;
+            height: 48px;
             object-fit: contain;
         }
 
         .seal-card h3 {
-            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
             margin-bottom: 8px;
-            color: #1e3a8a;
+            color: #1e3a5f;
         }
 
         .seal-card p {
-            font-size: 14px;
-            color: #4b5563;
+            font-size: 13px;
+            color: #64748b;
             line-height: 1.5;
         }
 
-        /* Pricing Packages - EXACTLY LIKE ADVANCED BIONUTRITIONALS */
+        /* Pricing Section */
         .pricing-section {
             background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            padding: 48px;
-            margin-bottom: 48px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 48px;
+            padding: 56px 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .pricing-section h2 {
-            font-size: 28px;
+            font-size: 32px;
             text-align: center;
-            margin-bottom: 8px;
-            color: #1e3a8a;
+            margin-bottom: 12px;
+            color: #0a2540;
             font-weight: 600;
         }
 
         .pricing-subtitle {
             text-align: center;
-            color: #6b7280;
-            margin-bottom: 40px;
-            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 48px;
+            font-size: 15px;
         }
 
         .pricing-grid {
@@ -331,32 +369,29 @@
         }
 
         @media (max-width: 992px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; gap: 40px; }
         }
 
         .pricing-card {
-            background: #f8fafc;
-            border-radius: 24px;
-            padding: 32px 24px;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 40px 28px;
             text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
         }
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #e2e8f0;
+            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.12);
         }
 
         .pricing-card.popular {
-            border: 2px solid #3b82f6;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+            border: 2px solid #1e3a5f;
+            box-shadow: 0 20px 35px -12px rgba(30, 58, 95, 0.15);
         }
 
         .popular-badge {
@@ -364,56 +399,60 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #3b82f6;
+            background: #1e3a5f;
             color: white;
-            padding: 4px 16px;
+            padding: 5px 18px;
             border-radius: 50px;
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .bottle-image {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .bottle-image img {
             width: 100px;
             height: auto;
+            opacity: 0.9;
         }
 
         .bottle-count {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 8px;
-            color: #1e3a8a;
+            color: #64748b;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
         }
 
         .price-per-bottle {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 800;
-            color: #1e3a8a;
-            margin: 16px 0 8px;
+            color: #0a2540;
+            margin: 20px 0 8px;
         }
 
         .price-per-bottle small {
             font-size: 14px;
-            font-weight: normal;
-            color: #6b7280;
+            font-weight: 500;
+            color: #64748b;
         }
 
         .instant-savings {
-            background: #e8f0fe;
-            padding: 8px 12px;
-            border-radius: 12px;
-            font-size: 13px;
+            background: #f1f5f9;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
             font-weight: 600;
-            color: #1e3a8a;
+            color: #1e3a5f;
+            display: inline-block;
             margin: 12px 0;
         }
 
         .free-shipping {
-            color: #22c55e;
-            font-size: 14px;
+            color: #2b6e3c;
+            font-size: 13px;
             font-weight: 600;
             margin: 8px 0;
         }
@@ -421,12 +460,12 @@
         .total-price {
             font-size: 20px;
             font-weight: 700;
-            color: #1e3a8a;
-            margin: 12px 0;
+            color: #0a2540;
+            margin: 16px 0;
         }
 
         .pricing-cta {
-            background: #1e3a8a;
+            background: #0a2540;
             color: white;
             padding: 14px 32px;
             border-radius: 50px;
@@ -438,367 +477,45 @@
             margin-top: 16px;
             width: 100%;
             max-width: 200px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
         }
 
         .pricing-cta:hover {
-            background: #3b82f6;
+            background: #1e3a5f;
             transform: translateY(-2px);
+        }
+
+        .payment-icons-small {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
         }
 
         /* Testimonials Section */
         .testimonials-section {
             background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            padding: 48px;
-            margin-bottom: 48px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
-        }
-
-        .testimonials-section h2 {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 24px;
-            color: #1e3a8a;
-        }
-
-        .review-disclaimer {
-            text-align: center;
-            font-size: 12px;
-            color: #9ca3af;
-            margin-bottom: 32px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        @media (max-width: 992px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .testimonial-card {
-            background: #f8fafc;
-            border-radius: 24px;
-            padding: 28px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonial-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 3px solid #3b82f6;
-        }
-
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 16px;
-            color: #1f2937;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: #1e3a8a;
-        }
-
-        .testimonial-location {
-            font-size: 12px;
-            color: #6b7280;
-            margin-top: 4px;
-        }
-
-        /* Problem/Solution Section */
-        .section {
-            background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            padding: 48px;
-            margin-bottom: 48px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
-        }
-
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #1e3a8a;
-        }
-
-        .section-title span {
-            color: #3b82f6;
-        }
-
-        .problem-solution {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-        }
-
-        @media (max-width: 768px) {
-            .problem-solution {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .problem-card, .solution-card {
-            padding: 32px;
-            border-radius: 24px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-        }
-
-        .problem-card h3 {
-            color: #ef4444;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .solution-card h3 {
-            color: #3b82f6;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .problem-card ul, .solution-card ul {
-            list-style: none;
-        }
-
-        .problem-card li, .solution-card li {
-            margin-bottom: 12px;
-            padding-left: 28px;
-            position: relative;
-            color: #4b5563;
-        }
-
-        .problem-card li:before {
-            content: "✗";
-            color: #ef4444;
-            position: absolute;
-            left: 0;
-        }
-
-        .solution-card li:before {
-            content: "✓";
-            color: #3b82f6;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Ingredients Grid */
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 24px;
-        }
-
-        @media (max-width: 992px) {
-            .ingredients-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .ingredients-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .ingredient-card {
-            text-align: center;
-            padding: 28px 20px;
-            background: #f8fafc;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .ingredient-card:hover {
-            transform: translateY(-4px);
-            border-color: #3b82f6;
-        }
-
-        .ingredient-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-
-        .ingredient-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #1e3a8a;
-        }
-
-        .ingredient-card p {
-            font-size: 14px;
-            color: #6b7280;
-            line-height: 1.5;
-        }
-
-        /* Guarantee Box */
-        .guarantee-box {
-            text-align: center;
-            padding: 48px;
-            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
-            border-radius: 24px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .guarantee-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-
-        .guarantee-box h2 {
-            font-size: 28px;
-            margin-bottom: 16px;
-            color: #1e3a8a;
-        }
-
-        .guarantee-box p {
-            color: #4b5563;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Footer - EXACTLY LIKE ADVANCED BIONUTRITIONALS */
-        .footer {
-            background: #1e293b;
-            padding: 48px 0 32px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #3b82f6;
-        }
-
-        .footer-disclaimer {
-            max-width: 900px;
-            margin: 0 auto 32px;
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.5);
-            line-height: 1.6;
-        }
-
-        .footer-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            flex-wrap: wrap;
-            margin: 32px 0;
-            padding: 24px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-badge-img {
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 24px 0;
-        }
-
-        .payment-methods img {
-            height: 30px;
-            object-fit: contain;
-        }
-
-        .copyright {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.4);
-            line-height: 1.6;
-            margin-top: 24px;
-        }
-
-        .address {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.4);
-            margin-top: 12px;
-        }
-
-        .digistore {
-            font-size: 10px;
-            color: rgba(255, 255, 255, 0.3);
-            margin-top: 16px;
-        }
-
-        .countdown {
-            background: #eff6ff;
-            border: 1px solid #3b82f6;
-            border-radius: 12px;
-            padding: 12px 20px;
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .countdown-text {
-            font-size: 14px;
-            color: #1e3a8a;
-            font-weight: 600;
-            letter-spacing: 1px;
+            border-radius: 48px;
+            padding: 56px 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
         }
 
         .live-activity {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: #eff6ff;
-            padding: 6px 12px;
-            border-radius: 50px;
+            gap: 8px;
+            background: #f1f5f9;
+            padding: 8px 16px;
+            border-radius: 100px;
             font-size: 12px;
-            margin-bottom: 16px;
+            font-weight: 500;
+            color: #1e3a5f;
+            margin-bottom: 24px;
         }
 
         .pulse {
@@ -814,16 +531,336 @@
             100% { transform: scale(1.5); opacity: 0; }
         }
 
-        hr {
-            margin: 24px 0;
+        .testimonials-section h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0a2540;
+            font-weight: 500;
+        }
+
+        .review-disclaimer {
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 992px) {
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .testimonial-card {
+            background: #fafbfd;
+            border-radius: 28px;
+            padding: 32px;
+            border: 1px solid #eef2f6;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
             border-color: #e2e8f0;
+        }
+
+        .testimonial-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 16px;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: normal;
+            margin-bottom: 20px;
+            color: #334155;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        .testimonial-location {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: #ffffff;
+            border-radius: 48px;
+            padding: 56px 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #0a2540;
+        }
+
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .problem-solution { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        .problem-card, .solution-card {
+            padding: 32px;
+            border-radius: 28px;
+            background: #fafbfd;
+            border: 1px solid #eef2f6;
+        }
+
+        .problem-card h3, .solution-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .problem-card h3 { color: #c2410c; }
+        .solution-card h3 { color: #1e3a5f; }
+
+        .problem-card ul, .solution-card ul {
+            list-style: none;
+        }
+
+        .problem-card li, .solution-card li {
+            margin-bottom: 14px;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .problem-card li:before {
+            content: "✗";
+            color: #c2410c;
+            position: absolute;
+            left: 0;
+        }
+
+        .solution-card li:before {
+            content: "✓";
+            color: #1e3a5f;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        @media (max-width: 992px) {
+            .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .ingredients-grid { grid-template-columns: 1fr; }
+        }
+
+        .ingredient-card {
+            text-align: center;
+            padding: 28px 20px;
+            background: #fafbfd;
+            border-radius: 24px;
+            border: 1px solid #eef2f6;
+            transition: all 0.3s;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-4px);
+            border-color: #e2e8f0;
+        }
+
+        .ingredient-icon {
+            font-size: 44px;
+            margin-bottom: 16px;
+        }
+
+        .ingredient-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0a2540;
+        }
+
+        .ingredient-card p {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .guarantee-box {
+            text-align: center;
+            padding: 48px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 32px;
+        }
+
+        .guarantee-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-box h2 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: #0a2540;
+            font-weight: 500;
+        }
+
+        .guarantee-box p {
+            color: #475569;
+            max-width: 550px;
+            margin: 0 auto;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a2540;
+            padding: 56px 0 40px;
+            color: #ffffff;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-disclaimer {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 32px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .payment-icons-footer {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 32px 0;
+        }
+
+        .payment-icons-footer span {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+        }
+
+        .address {
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 24px 0;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.6;
+        }
+
+        .digistore {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 12px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eef2f6;
+            margin: 32px 0;
+        }
+
+        .countdown {
+            background: #f1f5f9;
+            border-radius: 100px;
+            padding: 10px 24px;
+            display: inline-block;
+            margin-bottom: 28px;
+        }
+
+        .countdown-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e3a5f;
+            letter-spacing: 0.3px;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">advanced <span>bionutritionals</span>®</div>
+            <div class="logo">advanced bionutritionals<sup>®</sup></div>
             <div class="nav-links">
                 <a href="#">About</a>
                 <a href="#">Ingredients</a>
@@ -832,7 +869,7 @@
                 <a href="#">Order Now</a>
             </div>
             <div class="trust-badge">
-                <span>⭐ 4.8/5 (15,347+ reviews)</span>
+                <span>⭐ 4.8/5 (15,347 reviews)</span>
                 <span>🚚 Free Shipping on 3+</span>
                 <span>🔒 30-Day Guarantee</span>
             </div>
@@ -841,246 +878,167 @@
 
     <main class="main">
         <div class="container">
-            <!-- Hero Section -->
+            <!-- Hero -->
             <div class="hero">
                 <div class="hero-content">
                     <div class="countdown">
-                        <span class="countdown-text">🔥 LIMITED TIME OFFER: FREE SHIPPING ON ALL ORDERS OF 3+ BOTTLES 🔥</span>
+                        <span class="countdown-text">🔥 LIMITED TIME: FREE SHIPPING ON 3+ BOTTLES 🔥</span>
                     </div>
-                    <h1>Restore Your <span class="highlight">Memory & Focus</span> While Maintaining <span class="highlight">Muscle Mass</span></h1>
-                    
+                    <h1>Restore Your <span class="highlight">Memory & Focus</span><br>While Maintaining <span class="highlight">Muscle Mass</span></h1>
                     <div class="product-image">
-                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" alt="Advanced Amino Formula Bottle" onerror="this.src='https://placehold.co/280x280/1e3a8a/ffffff?text=Advanced+Amino'">
-                        <div class="badges-center">
-                            <span class="badge">⭐ #1 Best Seller</span>
-                            <span class="badge">🏆 GMP Certified</span>
-                            <span class="badge">🇺🇸 Made in USA</span>
-                        </div>
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" alt="Advanced Amino Formula" onerror="this.src='https://placehold.co/260x260/1e3a5f/ffffff?text=Advanced+Amino'">
                     </div>
-                    
-                    <p class="subtitle">The clinically-backed amino acid formula trusted by over 15,000 customers. Designed for professionals, athletes, and anyone who wants a sharper mind and stronger body.</p>
-                    
-                    <div style="display: flex; justify-content: center;">
-                        <ul class="benefits">
-                            <li>✅ Clinically proven to improve memory and concentration</li>
-                            <li>✅ Increases mental clarity and physical energy</li>
-                            <li>✅ Helps maintain lean muscle mass naturally</li>
-                            <li>✅ Reduces brain fog and mental fatigue</li>
-                            <li>✅ 100% natural, non-GMO, gluten-free</li>
-                        </ul>
+                    <p class="subtitle">Clinically formulated amino acid complex trusted by over 15,000 customers. Designed for sharp minds and strong bodies.</p>
+                    <ul class="benefits">
+                        <li>Improves memory & concentration</li>
+                        <li>Increases mental clarity & energy</li>
+                        <li>Helps maintain lean muscle mass</li>
+                        <li>Reduces brain fog & fatigue</li>
+                        <li>100% natural, non-GMO, gluten-free</li>
+                    </ul>
+                    <div class="badges-center">
+                        <span class="badge">⭐ #1 Best Seller</span>
+                        <span class="badge">🏆 GMP Certified</span>
+                        <span class="badge">🇺🇸 Made in USA</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Trust Seals Section -->
+            <!-- Trust Seals -->
             <div class="trust-seals">
                 <h2>Premium Quality You Can Trust</h2>
                 <div class="seals-grid">
                     <div class="seal-card">
-                        <div class="seal-icon">
-                            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" style="width: 55px; border-radius: 8px;">
-                        </div>
+                        <div class="seal-icon"><img src="https://flagcdn.com/w320/us.png" alt="USA" style="border-radius: 4px;"></div>
                         <h3>Made In USA</h3>
-                        <p>Our Advanced Amino Formula 100% natural supplement is proudly made in the United States of America.</p>
+                        <p>Proudly manufactured in the United States with the highest quality standards.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1903/1903426.png" alt="GMP Certification" style="width: 50px;">
-                        </div>
+                        <div class="seal-icon"><img src="https://cdn-icons-png.flaticon.com/512/1903/1903426.png" alt="GMP"></div>
                         <h3>GMP Certified</h3>
-                        <p>This product has been certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
+                        <p>Certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="FDA Approved" style="width: 50px;">
-                        </div>
+                        <div class="seal-icon"><img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="FDA"></div>
                         <h3>FDA Registered</h3>
-                        <p>Advanced Amino Formula is formulated in a facility registered with FDA & follows all FDA regulations.</p>
+                        <p>Formulated in an FDA-registered facility following all regulations.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3106/3106786.png" alt="100% Natural" style="width: 50px;">
-                        </div>
+                        <div class="seal-icon"><img src="https://cdn-icons-png.flaticon.com/512/3106/3106786.png" alt="Natural"></div>
                         <h3>100% Natural</h3>
-                        <p>Made with all-natural, non-GMO, and gluten-free ingredients. No artificial additives.</p>
+                        <p>All-natural, non-GMO, gluten-free ingredients. No artificial additives.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Pricing Packages - EXACTLY LIKE ADVANCED BIONUTRITIONALS -->
+            <!-- Pricing -->
             <div class="pricing-section">
                 <h2>Choose Your Package</h2>
-                <p class="pricing-subtitle">Stock up and save more! The more you buy, the more you save.</p>
+                <p class="pricing-subtitle">Stock up and save — the more you buy, the more you save</p>
                 <div class="pricing-grid">
-                    <!-- 1 Bottle -->
                     <div class="pricing-card">
-                        <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=1x'" alt="1 Bottle">
-                        </div>
+                        <div class="bottle-image"><img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" alt="1 Bottle"></div>
                         <div class="bottle-count">1 BOTTLE</div>
                         <div class="price-per-bottle">$39.95 <small>/ Bottle</small></div>
                         <div class="total-price">Total: $39.95</div>
                         <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=AnibalJoaoGuilengue" class="pricing-cta" target="_blank">Add To Cart</a>
-                        <div class="payment-methods" style="margin-top: 16px; justify-content: center;">
-                            <span style="font-size: 12px; color: #6b7280;">VISA</span>
-                            <span style="font-size: 12px; color: #6b7280;">mastercard</span>
-                            <span style="font-size: 12px; color: #6b7280;">AMERICAN EXPRESS</span>
-                            <span style="font-size: 12px; color: #6b7280;">DISCOVER</span>
-                        </div>
+                        <div class="payment-icons-small">VISA • Mastercard • Amex • Discover</div>
                     </div>
-
-                    <!-- 3 Bottles -->
                     <div class="pricing-card popular">
                         <div class="popular-badge">⭐ MOST POPULAR</div>
-                        <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-3pack.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=3x'" alt="3 Bottles">
-                        </div>
+                        <div class="bottle-image"><img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-3pack.png" alt="3 Bottles"></div>
                         <div class="bottle-count">3 BOTTLES</div>
                         <div class="price-per-bottle">$35.95 <small>/ Bottle</small></div>
                         <div class="instant-savings">Instant Savings: $12.00</div>
                         <div class="free-shipping">✓ FREE SHIPPING</div>
                         <div class="total-price">Total: $107.85</div>
                         <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=AnibalJoaoGuilengue" class="pricing-cta" target="_blank">Add To Cart</a>
-                        <div class="payment-methods" style="margin-top: 16px; justify-content: center;">
-                            <span style="font-size: 12px; color: #6b7280;">VISA</span>
-                            <span style="font-size: 12px; color: #6b7280;">mastercard</span>
-                            <span style="font-size: 12px; color: #6b7280;">AMERICAN EXPRESS</span>
-                            <span style="font-size: 12px; color: #6b7280;">DISCOVER</span>
-                        </div>
+                        <div class="payment-icons-small">VISA • Mastercard • Amex • Discover</div>
                     </div>
-
-                    <!-- 6 Bottles - BEST VALUE -->
                     <div class="pricing-card">
-                        <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-6pack.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=6x'" alt="6 Bottles">
-                        </div>
+                        <div class="bottle-image"><img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-6pack.png" alt="6 Bottles"></div>
                         <div class="bottle-count">6 BOTTLES</div>
                         <div class="price-per-bottle">$33.25 <small>/ Bottle</small></div>
                         <div class="instant-savings">Instant Savings: $40.20</div>
                         <div class="free-shipping">✓ FREE SHIPPING</div>
                         <div class="total-price">Total: $199.50</div>
                         <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=AnibalJoaoGuilengue" class="pricing-cta" target="_blank">Add To Cart</a>
-                        <div class="payment-methods" style="margin-top: 16px; justify-content: center;">
-                            <span style="font-size: 12px; color: #6b7280;">VISA</span>
-                            <span style="font-size: 12px; color: #6b7280;">mastercard</span>
-                            <span style="font-size: 12px; color: #6b7280;">AMERICAN EXPRESS</span>
-                            <span style="font-size: 12px; color: #6b7280;">DISCOVER</span>
-                        </div>
+                        <div class="payment-icons-small">VISA • Mastercard • Amex • Discover</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonials Section with Disclaimer -->
+            <!-- Testimonials -->
             <div class="testimonials-section">
-                <div style="display: flex; justify-content: center; margin-bottom: 24px;">
-                    <div class="live-activity">
-                        <div class="pulse"></div>
-                        <span>12 people bought in the last hour</span>
-                    </div>
+                <div style="text-align: center;">
+                    <div class="live-activity"><div class="pulse"></div>12 people bought in the last hour</div>
                 </div>
-                <h2>What Our Happy Customers Are Saying</h2>
-                <div class="review-disclaimer">
-                    Above are actual reviews from our customers. These customer's statements may not reflect the typical purchaser's experience and are not intended to represent or guarantee that anyone will achieve the same or similar results. The reviews should not be taken as the results a typical user will get. Your results may vary.
-                </div>
+                <h2>What Our Customers Are Saying</h2>
+                <div class="review-disclaimer">Above are actual reviews from our customers. These statements may not reflect typical results. Your results may vary.</div>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Olivia" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="testimonial-img" alt="Customer">
                         <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"I've been using Advanced Amino for 3 months now. My memory has improved dramatically and I feel more energetic throughout the day. Best investment in my health!"</p>
-                        <p class="testimonial-author">– Olivia from Ohio</p>
-                        <p class="testimonial-location">Purchased 6 bottles of Advanced Amino Formula™</p>
+                        <p class="testimonial-text">"My memory has improved dramatically. I feel more energetic and focused throughout the day. Best investment in my health!"</p>
+                        <p class="testimonial-author">Olivia from Ohio</p>
+                        <p class="testimonial-location">Purchased 6 bottles</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Robert" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" class="testimonial-img" alt="Customer">
                         <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"As a 62-year-old athlete, I was losing muscle and struggling with focus. This supplement changed everything. More energy, better focus, and I'm stronger than ever!"</p>
-                        <p class="testimonial-author">– Robert Miller</p>
-                        <p class="testimonial-location">📍 London, UK | Age 62</p>
+                        <p class="testimonial-text">"At 62, I was losing muscle and struggling with focus. This supplement changed everything. More energy, better focus, stronger than ever!"</p>
+                        <p class="testimonial-author">Robert Miller</p>
+                        <p class="testimonial-location">London, UK | Age 62</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" class="testimonial-img" alt="Customer">
                         <div class="stars">★★★★★</div>
-                        <p class="testimonial-text">"My concentration at work has never been better. No more brain fog, and I'm actually remembering things I used to forget. Highly recommend!"</p>
-                        <p class="testimonial-author">– Maria Garcia</p>
-                        <p class="testimonial-location">📍 Madrid, Spain | Age 41</p>
+                        <p class="testimonial-text">"My concentration at work has never been better. No more brain fog. I'm actually remembering things I used to forget. Highly recommend!"</p>
+                        <p class="testimonial-author">Maria Garcia</p>
+                        <p class="testimonial-location">Madrid, Spain</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Problem/Solution Section -->
-            <div class="section">
-                <h2 class="section-title">Is Your <span>Brain & Body</span> Telling You Something?</h2>
+            <!-- Problem/Solution -->
+            <div class="content-section">
+                <h2 class="section-title">Is Your Brain & Body Telling You Something?</h2>
                 <div class="problem-solution">
                     <div class="problem-card">
-                        <h3>⚠️ Signs You Need Support:</h3>
-                        <ul>
-                            <li>Forgetting names and important appointments</li>
-                            <li>Difficulty concentrating for more than 20 minutes</li>
-                            <li>Mental fatigue hitting you by 2 PM</li>
-                            <li>Losing muscle mass despite working out</li>
-                            <li>Constant brain fog and lack of clarity</li>
-                            <li>Feeling mentally exhausted after simple tasks</li>
-                        </ul>
+                        <h3>Signs You Need Support</h3>
+                        <ul><li>Forgetting names and appointments</li><li>Difficulty concentrating</li><li>Mental fatigue by 2 PM</li><li>Losing muscle mass</li><li>Constant brain fog</li></ul>
                     </div>
                     <div class="solution-card">
-                        <h3>✅ What You'll Experience:</h3>
-                        <ul>
-                            <li>Crystal clear memory and faster recall</li>
-                            <li>Laser focus for hours on end</li>
-                            <li>Sustained energy without the crash</li>
-                            <li>Maintained lean muscle mass</li>
-                            <li>Mental clarity from day one</li>
-                            <li>Faster recovery after workouts</li>
-                        </ul>
+                        <h3>What You'll Experience</h3>
+                        <ul><li>Crystal clear memory</li><li>Laser focus for hours</li><li>Sustained energy</li><li>Maintained lean muscle</li><li>Mental clarity from day one</li></ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Ingredients Section -->
-            <div class="section">
-                <h2 class="section-title"><span>Premium Ingredients</span> Backed by Science</h2>
+            <!-- Ingredients -->
+            <div class="content-section">
+                <h2 class="section-title">Premium Ingredients Backed by Science</h2>
                 <div class="ingredients-grid">
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon">💪</div>
-                        <h3>Essential Amino Acids</h3>
-                        <p>All 8 essential aminos your body needs for brain function and muscle maintenance</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon">🧠</div>
-                        <h3>Bacopa Monnieri</h3>
-                        <p>Clinically shown to improve memory formation and recall by up to 40%</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon">⚡</div>
-                        <h3>Phosphatidylserine</h3>
-                        <p>Reduces cognitive stress and protects brain cells from age-related decline</p>
-                    </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon">🌿</div>
-                        <h3>Rhodiola Rosea</h3>
-                        <p>Adaptogen that fights mental fatigue and increases physical endurance</p>
-                    </div>
+                    <div class="ingredient-card"><div class="ingredient-icon">💪</div><h3>Essential Amino Acids</h3><p>All 8 essential aminos for brain function and muscle maintenance</p></div>
+                    <div class="ingredient-card"><div class="ingredient-icon">🧠</div><h3>Bacopa Monnieri</h3><p>Improves memory formation and recall by up to 40%</p></div>
+                    <div class="ingredient-card"><div class="ingredient-icon">⚡</div><h3>Phosphatidylserine</h3><p>Reduces cognitive stress and protects brain cells</p></div>
+                    <div class="ingredient-card"><div class="ingredient-icon">🌿</div><h3>Rhodiola Rosea</h3><p>Fights mental fatigue and increases endurance</p></div>
                 </div>
-                <div class="badges-center" style="margin-top: 24px;">
-                    <span class="badge">🌱 Gluten-Free</span>
-                    <span class="badge">🥛 Dairy-Free</span>
-                    <span class="badge">🌿 Non-GMO Verified</span>
-                    <span class="badge">💊 No Stimulants</span>
-                </div>
+                <div class="badges-center" style="margin-top: 32px;"><span class="badge">🌱 Gluten-Free</span><span class="badge">🥛 Dairy-Free</span><span class="badge">🌿 Non-GMO</span><span class="badge">💊 No Stimulants</span></div>
             </div>
 
-            <!-- Guarantee Section -->
-            <div class="section">
+            <!-- Guarantee -->
+            <div class="content-section">
                 <div class="guarantee-box">
                     <div class="guarantee-icon">🔒</div>
                     <h2>100% Risk-Free 30-Day Guarantee</h2>
-                    <p>Try Advanced Amino Formula for 30 days. If you don't notice a significant improvement in your memory, focus, or energy levels, we'll refund every penny. No questions asked. That's our promise to you.</p>
+                    <p>Try Advanced Amino Formula for 30 days. If you don't notice a significant improvement, we'll refund every penny. No questions asked.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer - EXACTLY LIKE ADVANCED BIONUTRITIONALS -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
@@ -1090,56 +1048,29 @@
                 <a href="#">CA Privacy Rights</a>
                 <a href="#">Return Policy</a>
             </div>
-            
             <div class="footer-disclaimer">
                 <p><strong>Disclaimers:</strong> Dr. Frank Shallenberger is compensated by Advanced Bionutritionals for his work in formulating and endorsing this product.</p>
-                <p style="margin-top: 8px;">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary from person to person.</p>
+                <p style="margin-top: 8px;">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
             </div>
-
             <div class="footer-badges">
-                <img src="https://www.advancedbionutritionals.com/images/norton-secured.png" alt="Norton Secured" class="footer-badge-img" onerror="this.style.display='none'">
-                <span style="color: white; font-size: 12px; font-weight: 500;">Norton SECURED BUSINESS</span>
-                <span style="color: white; font-size: 12px; font-weight: 500;">ACCREDITED BBB</span>
-                <div class="payment-methods" style="margin: 0;">
-                    <span style="color: white; font-size: 14px;">VISA</span>
-                    <span style="color: white; font-size: 14px;">mastercard</span>
-                    <span style="color: white; font-size: 12px;">AMERICAN EXPRESS</span>
-                    <span style="color: white; font-size: 14px;">DISCOVER</span>
-                </div>
+                <span style="color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 500;">Norton SECURED BUSINESS</span>
+                <span style="color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 500;">ACCREDITED BBB</span>
             </div>
-
-            <div class="payment-methods">
-                <span style="color: white; font-size: 14px;">VISA</span>
-                <span style="color: white; font-size: 14px;">mastercard</span>
-                <span style="color: white; font-size: 12px;">AMERICAN EXPRESS</span>
-                <span style="color: white; font-size: 14px;">DISCOVER</span>
-                <span style="color: #ffd700; font-size: 12px; font-weight: bold;">digistore24</span>
-                <span style="color: white; font-size: 12px;">SECURE ORDER</span>
+            <div class="payment-icons-footer">
+                <span>VISA</span> <span>mastercard</span> <span>AMERICAN EXPRESS</span> <span>DISCOVER</span> <span style="color: #ffd966;">digistore24</span> <span>SECURE ORDER</span>
             </div>
-
-            <div class="address">
-                5305 Oakbrook Parkway, Norcross, Georgia 30093
-            </div>
-
+            <div class="address">5305 Oakbrook Parkway, Norcross, Georgia 30093</div>
             <div class="copyright">
                 <p>Copyright © 2025 Advanced Bionutritionals, LLC. All rights reserved.</p>
-                <p class="digistore">2026 © Digistore24 Inc. (United States) Inc. and/or its licensors. Review here, terms of use here and privacy policy here. Contact us here.</p>
+                <p class="digistore">2026 © Digistore24 Inc. (United States) Inc. and/or its licensors.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('.cta-button, .pricing-cta').forEach(button => {
-            button.addEventListener('click', function() {
-                console.log('✅ CONVERSION: Purchase button clicked - ' + new Date().toISOString());
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
-                    });
-                }
-            });
+        document.querySelectorAll('.pricing-cta').forEach(btn => {
+            btn.addEventListener('click', () => console.log('✅ Conversion: Purchase clicked - ' + new Date().toISOString()));
         });
-        console.log('✅ Landing page loaded successfully');
     </script>
 </body>
 </html>
