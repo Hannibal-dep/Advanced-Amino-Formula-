@@ -14,8 +14,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #0a2f44 0%, #0a1f2e 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+            color: #1a2c3e;
             line-height: 1.5;
         }
 
@@ -29,9 +29,8 @@
 
         /* Header */
         .header {
-            background: rgba(10, 47, 68, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
             padding: 16px 0;
             position: sticky;
             top: 0;
@@ -48,19 +47,20 @@
 
         .logo {
             font-size: 24px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
+            color: #1e3a8a;
             letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #3b82f6;
         }
 
         .trust-badge {
             display: flex;
             gap: 24px;
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #4b5563;
         }
 
         .trust-badge span {
@@ -87,13 +87,13 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0a2f44 0%, #083452 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
             border-radius: 32px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             margin-bottom: 48px;
             overflow: hidden;
             padding: 48px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -114,6 +114,7 @@
             line-height: 1.2;
             margin-bottom: 24px;
             letter-spacing: -1px;
+            color: #1e3a8a;
         }
 
         @media (max-width: 768px) {
@@ -122,11 +123,8 @@
             }
         }
 
-        .hero-content .gradient-text {
-            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero-content .highlight {
+            color: #3b82f6;
         }
 
         /* Product Image */
@@ -139,7 +137,7 @@
             width: 100%;
             max-width: 280px;
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -156,18 +154,18 @@
         }
 
         .badge {
-            background: rgba(255, 255, 255, 0.1);
+            background: #eff6ff;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 500;
-            color: #D4AF37;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #1e3a8a;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .subtitle {
             font-size: 18px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #4b5563;
             margin-bottom: 28px;
             line-height: 1.6;
             max-width: 700px;
@@ -186,13 +184,13 @@
             margin-bottom: 14px;
             padding-left: 28px;
             position: relative;
-            color: rgba(255, 255, 255, 0.9);
+            color: #1f2937;
             font-size: 16px;
         }
 
         .benefits li:before {
             content: "✓";
-            color: #D4AF37;
+            color: #3b82f6;
             font-weight: bold;
             font-size: 18px;
             position: absolute;
@@ -205,7 +203,7 @@
 
         .old-price {
             font-size: 20px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #9ca3af;
             text-decoration: line-through;
             margin-right: 12px;
         }
@@ -213,26 +211,26 @@
         .new-price {
             font-size: 42px;
             font-weight: 800;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .price-note {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #6b7280;
             margin-top: 8px;
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
-            color: #0a2f44;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
             padding: 18px 48px;
             font-size: 18px;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
             text-align: center;
             border: none;
             cursor: pointer;
@@ -240,7 +238,7 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
         }
 
         /* Trust Indicators */
@@ -251,7 +249,7 @@
             flex-wrap: wrap;
             margin-top: 32px;
             padding-top: 24px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .trust-item {
@@ -259,23 +257,24 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #4b5563;
         }
 
         /* Trust Seals Section */
         .trust-seals {
-            background: #0a2f44;
+            background: #ffffff;
             border-radius: 32px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             padding: 48px;
             margin-bottom: 48px;
             text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .trust-seals h2 {
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 40px;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .seals-grid {
@@ -298,56 +297,72 @@
 
         .seal-card {
             text-align: center;
-            padding: 24px;
-            background: rgba(255, 255, 255, 0.05);
+            padding: 28px 20px;
+            background: #f8fafc;
             border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
 
         .seal-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
         }
 
         .seal-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            border-radius: 50%;
+        }
+
+        .seal-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
 
         .seal-card h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 8px;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .seal-card p {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #4b5563;
+            line-height: 1.5;
         }
 
         /* Pricing Packages */
         .pricing-section {
-            background: #0a2f44;
+            background: #ffffff;
             border-radius: 32px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             padding: 48px;
             margin-bottom: 48px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .pricing-section h2 {
             font-size: 32px;
             text-align: center;
             margin-bottom: 16px;
+            color: #1e3a8a;
         }
 
         .pricing-section h2 span {
-            color: #D4AF37;
+            color: #3b82f6;
         }
 
         .pricing-subtitle {
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);
+            color: #6b7280;
             margin-bottom: 40px;
             font-size: 16px;
         }
@@ -367,24 +382,24 @@
         }
 
         .pricing-card {
-            background: linear-gradient(135deg, #083452 0%, #06263e 100%);
+            background: #f8fafc;
             border-radius: 24px;
             padding: 32px 24px;
             text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            border-color: #D4AF37;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .pricing-card.popular {
-            border: 2px solid #D4AF37;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            border: 2px solid #3b82f6;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
         }
 
         .popular-badge {
@@ -392,8 +407,8 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #D4AF37;
-            color: #0a2f44;
+            background: #3b82f6;
+            color: white;
             padding: 4px 16px;
             border-radius: 50px;
             font-size: 12px;
@@ -413,7 +428,7 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .pricing-card .old-price {
@@ -425,62 +440,64 @@
         }
 
         .save-amount {
-            background: rgba(212, 175, 55, 0.2);
+            background: #eff6ff;
             padding: 4px 12px;
             border-radius: 50px;
             font-size: 12px;
             display: inline-block;
             margin: 12px 0;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .per-bottle {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #6b7280;
             margin-top: 8px;
         }
 
         .free-shipping {
-            color: #D4AF37;
+            color: #3b82f6;
             font-size: 14px;
             font-weight: 600;
             margin: 16px 0;
         }
 
         .pricing-cta {
-            background: rgba(212, 175, 55, 0.2);
-            color: #D4AF37;
+            background: #1e3a8a;
+            color: white;
             padding: 12px 24px;
             border-radius: 50px;
             text-decoration: none;
             display: inline-block;
             font-weight: 600;
             transition: all 0.3s;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: none;
         }
 
         .pricing-cta:hover {
-            background: #D4AF37;
-            color: #0a2f44;
+            background: #3b82f6;
+            transform: translateY(-2px);
         }
 
         /* Testimonials Section */
         .testimonials-section {
-            background: #0a2f44;
+            background: #ffffff;
             border-radius: 32px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             padding: 48px;
             margin-bottom: 48px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .testimonials-section h2 {
             font-size: 32px;
             text-align: center;
             margin-bottom: 40px;
+            color: #1e3a8a;
         }
 
         .testimonials-section h2 span {
-            color: #D4AF37;
+            color: #3b82f6;
         }
 
         .testimonials-grid {
@@ -502,15 +519,16 @@
         }
 
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: #f8fafc;
             border-radius: 24px;
             padding: 28px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: transform 0.3s;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
 
         .testimonial-img {
@@ -519,11 +537,11 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 16px;
-            border: 2px solid #D4AF37;
+            border: 3px solid #3b82f6;
         }
 
         .stars {
-            color: #D4AF37;
+            color: #fbbf24;
             margin-bottom: 12px;
             font-size: 14px;
         }
@@ -531,28 +549,29 @@
         .testimonial-text {
             font-style: italic;
             margin-bottom: 16px;
-            color: rgba(255, 255, 255, 0.9);
+            color: #1f2937;
             line-height: 1.6;
         }
 
         .testimonial-author {
             font-weight: 700;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .testimonial-location {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #6b7280;
             margin-top: 4px;
         }
 
         /* Problem/Solution Section */
         .section {
-            background: #0a2f44;
+            background: #ffffff;
             border-radius: 32px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             padding: 48px;
             margin-bottom: 48px;
+            border: 1px solid rgba(59, 130, 246, 0.1);
         }
 
         .section-title {
@@ -560,10 +579,11 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 40px;
+            color: #1e3a8a;
         }
 
         .section-title span {
-            color: #D4AF37;
+            color: #3b82f6;
         }
 
         .problem-solution {
@@ -581,18 +601,18 @@
         .problem-card, .solution-card {
             padding: 32px;
             border-radius: 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
         }
 
         .problem-card h3 {
-            color: #ff6b6b;
+            color: #ef4444;
             font-size: 24px;
             margin-bottom: 20px;
         }
 
         .solution-card h3 {
-            color: #D4AF37;
+            color: #3b82f6;
             font-size: 24px;
             margin-bottom: 20px;
         }
@@ -605,19 +625,19 @@
             margin-bottom: 12px;
             padding-left: 28px;
             position: relative;
-            color: rgba(255, 255, 255, 0.8);
+            color: #4b5563;
         }
 
         .problem-card li:before {
             content: "✗";
-            color: #ff6b6b;
+            color: #ef4444;
             position: absolute;
             left: 0;
         }
 
         .solution-card li:before {
             content: "✓";
-            color: #D4AF37;
+            color: #3b82f6;
             position: absolute;
             left: 0;
         }
@@ -645,15 +665,15 @@
         .ingredient-card {
             text-align: center;
             padding: 28px 20px;
-            background: rgba(255, 255, 255, 0.03);
+            background: #f8fafc;
             border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
         }
 
         .ingredient-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(212, 175, 55, 0.5);
+            border-color: #3b82f6;
         }
 
         .ingredient-icon {
@@ -664,12 +684,12 @@
         .ingredient-card h3 {
             font-size: 18px;
             margin-bottom: 10px;
-            color: #D4AF37;
+            color: #1e3a8a;
         }
 
         .ingredient-card p {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
+            color: #6b7280;
             line-height: 1.5;
         }
 
@@ -677,9 +697,9 @@
         .guarantee-box {
             text-align: center;
             padding: 48px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
             border-radius: 24px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .guarantee-icon {
@@ -690,10 +710,11 @@
         .guarantee-box h2 {
             font-size: 28px;
             margin-bottom: 16px;
+            color: #1e3a8a;
         }
 
         .guarantee-box p {
-            color: rgba(255, 255, 255, 0.7);
+            color: #4b5563;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -701,7 +722,7 @@
         /* Final CTA */
         .final-cta {
             text-align: center;
-            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             border-radius: 32px;
             padding: 56px 48px;
             margin-bottom: 48px;
@@ -710,25 +731,25 @@
         .final-cta h2 {
             font-size: 40px;
             font-weight: 800;
-            color: #0a2f44;
+            color: white;
             margin-bottom: 20px;
         }
 
         .final-cta p {
             font-size: 18px;
-            color: rgba(10, 47, 68, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 32px;
         }
 
         .final-cta .cta-button {
-            background: #0a2f44;
-            color: #D4AF37;
+            background: white;
+            color: #1e3a8a;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .final-cta .cta-button:hover {
-            background: #083452;
-            color: #FFD700;
+            background: #f8fafc;
+            transform: translateY(-2px);
         }
 
         .payment-icons {
@@ -737,6 +758,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            filter: brightness(0) invert(1);
         }
 
         .flags {
@@ -750,9 +772,8 @@
 
         /* Footer */
         .footer {
-            background: #06263e;
+            background: #1e293b;
             padding: 48px 0 32px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
             text-align: center;
         }
 
@@ -765,14 +786,14 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: #D4AF37;
+            color: #3b82f6;
         }
 
         .copyright {
@@ -782,8 +803,8 @@
         }
 
         .countdown {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: #eff6ff;
+            border: 1px solid #3b82f6;
             border-radius: 12px;
             padding: 12px 20px;
             text-align: center;
@@ -792,16 +813,32 @@
 
         .countdown-text {
             font-size: 14px;
-            color: #D4AF37;
+            color: #1e3a8a;
             font-weight: 600;
             letter-spacing: 1px;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .footer-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">⚡ ADVANCED AMINO FORMULA™</div>
+            <div class="logo">ADVANCED <span>AMINO</span> FORMULA™</div>
             <div class="trust-badge">
                 <span>⭐ 4.8/5 (15,347+ reviews)</span>
                 <span>🚚 Free Worldwide Shipping</span>
@@ -816,12 +853,12 @@
             <div class="hero">
                 <div class="hero-content">
                     <div class="countdown">
-                        <span class="countdown-text">🔥 LIMITED TIME OFFER: UP TO 45% OFF + FREE SHIPPING 🔥</span>
+                        <span class="countdown-text">🔥 LIMITED TIME OFFER: UP TO 57% OFF + FREE SHIPPING 🔥</span>
                     </div>
-                    <h1>Restore Your <span class="gradient-text">Memory & Focus</span> While Maintaining <span class="gradient-text">Muscle Mass</span></h1>
+                    <h1>Restore Your <span class="highlight">Memory & Focus</span> While Maintaining <span class="highlight">Muscle Mass</span></h1>
                     
                     <div class="product-image">
-                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" alt="Advanced Amino Formula Bottle" onerror="this.src='https://placehold.co/280x280/0a2f44/D4AF37?text=Advanced+Amino'">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" alt="Advanced Amino Formula Bottle" onerror="this.src='https://placehold.co/280x280/1e3a8a/ffffff?text=Advanced+Amino'">
                         <div class="badges-center">
                             <span class="badge">⭐ #1 Best Seller</span>
                             <span class="badge">🏆 GMP Certified</span>
@@ -851,34 +888,42 @@
                 </div>
             </div>
 
-            <!-- Trust Seals Section (Made in USA, GMP, FDA, Natural) -->
+            <!-- Trust Seals Section with Flags and Images -->
             <div class="trust-seals">
                 <h2>Premium Quality You Can Trust</h2>
                 <div class="seals-grid">
                     <div class="seal-card">
-                        <div class="seal-icon">🇺🇸</div>
+                        <div class="seal-icon">
+                            <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" style="width: 50px; border-radius: 4px;">
+                        </div>
                         <h3>Made In USA</h3>
                         <p>Our Advanced Amino Formula is proudly manufactured in the United States with the highest quality standards.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">🏭</div>
+                        <div class="seal-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1903/1903426.png" alt="GMP Certification" style="width: 45px;">
+                        </div>
                         <h3>GMP Certified</h3>
                         <p>Certified under Good Manufacturing Practice standards for pharmaceutical-grade quality.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">✅</div>
+                        <div class="seal-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="FDA Approved" style="width: 45px;">
+                        </div>
                         <h3>FDA Registered</h3>
                         <p>Formulated in an FDA-registered facility following all FDA regulations and guidelines.</p>
                     </div>
                     <div class="seal-card">
-                        <div class="seal-icon">🌿</div>
+                        <div class="seal-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3106/3106786.png" alt="100% Natural" style="width: 45px;">
+                        </div>
                         <h3>100% Natural</h3>
                         <p>Made with all-natural, non-GMO, and gluten-free ingredients. No artificial additives.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Pricing Packages Section - 3 Bottles, 6 Bottles, 1 Bottle -->
+            <!-- Pricing Packages Section -->
             <div class="pricing-section">
                 <h2>Choose Your <span>Best Value Package</span></h2>
                 <p class="pricing-subtitle">Stock up and save more! The more you buy, the more you save.</p>
@@ -886,7 +931,7 @@
                     <!-- 1 Bottle -->
                     <div class="pricing-card">
                         <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" onerror="this.src='https://placehold.co/100x100/0a2f44/D4AF37?text=1x'" alt="1 Bottle">
+                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=1x'" alt="1 Bottle">
                         </div>
                         <div class="bottle-count">1 BOTTLE</div>
                         <div class="price-box">
@@ -903,7 +948,7 @@
                     <div class="pricing-card popular">
                         <div class="popular-badge">⭐ BEST SELLER</div>
                         <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-3pack.png" onerror="this.src='https://placehold.co/100x100/0a2f44/D4AF37?text=3x'" alt="3 Bottles">
+                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-3pack.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=3x'" alt="3 Bottles">
                         </div>
                         <div class="bottle-count">3 BOTTLES</div>
                         <div class="price-box">
@@ -919,7 +964,7 @@
                     <!-- 6 Bottles - BEST VALUE -->
                     <div class="pricing-card">
                         <div class="bottle-image">
-                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-6pack.png" onerror="this.src='https://placehold.co/100x100/0a2f44/D4AF37?text=6x'" alt="6 Bottles">
+                            <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-6pack.png" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=6x'" alt="6 Bottles">
                         </div>
                         <div class="bottle-count">6 BOTTLES</div>
                         <div class="price-box">
@@ -939,42 +984,42 @@
                 <h2>What Our <span>Happy Customers</span> Are Saying</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Johnson" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I've been using Advanced Amino for 3 months now. My memory has improved dramatically and I feel more energetic throughout the day. Best investment in my health!"</p>
                         <p class="testimonial-author">– Sarah Johnson</p>
                         <p class="testimonial-location">📍 New York, USA | Age 34</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Robert Miller" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"As a 62-year-old athlete, I was losing muscle and struggling with focus. This supplement changed everything. More energy, better focus, and I'm stronger than ever!"</p>
                         <p class="testimonial-author">– Robert Miller</p>
                         <p class="testimonial-location">📍 London, UK | Age 62</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria Garcia" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"My concentration at work has never been better. No more brain fog, and I'm actually remembering things I used to forget. Highly recommend!"</p>
                         <p class="testimonial-author">– Maria Garcia</p>
                         <p class="testimonial-location">📍 Madrid, Spain | Age 41</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chen" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I'm a university student and this supplement helped me focus during exams. My grades improved and I feel sharper than ever. Worth every penny!"</p>
                         <p class="testimonial-author">– David Chen</p>
                         <p class="testimonial-location">📍 Toronto, Canada | Age 22</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="James Wilson" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"At 68, I thought memory loss was inevitable. This product proved me wrong. My mind is clearer, I'm more active, and I feel 10 years younger!"</p>
                         <p class="testimonial-author">– James Wilson</p>
                         <p class="testimonial-location">📍 Sydney, Australia | Age 68</p>
                     </div>
                     <div class="testimonial-card">
-                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Customer" class="testimonial-img">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Patricia Santos" class="testimonial-img">
                         <div class="stars">★★★★★</div>
                         <p class="testimonial-text">"I bought the 6-bottle package and I'm so glad I did. My energy levels are consistent, my workouts are better, and my memory is sharp. Amazing product!"</p>
                         <p class="testimonial-author">– Patricia Santos</p>
@@ -1059,8 +1104,8 @@
                 <h2>Ready to Transform Your Mind & Body?</h2>
                 <p>Join over 15,000 satisfied customers who have already experienced the difference. This special pricing won't last forever.</p>
                 <div class="price-box">
-                    <span class="old-price" style="color: rgba(10, 47, 68, 0.6);">$135.00</span>
-                    <span class="new-price" style="color: #0a2f44; font-size: 42px;">Starting at $58/bottle</span>
+                    <span class="old-price" style="color: rgba(255,255,255,0.6);">$135.00</span>
+                    <span class="new-price" style="color: white; font-size: 42px;">Starting at $58/bottle</span>
                 </div>
                 <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=AnibalJoaoGuilengue" class="cta-button" target="_blank">🎯 GET MY BOTTLE NOW →</a>
                 <div class="payment-icons">
@@ -1069,7 +1114,7 @@
                 <div class="flags">
                     🇺🇸 🇨🇦 🇬🇧 🇩🇪 🇫🇷 🇪🇸 🇵🇹 🇮🇹 🇦🇺 🇧🇷 🇲🇽
                 </div>
-                <div class="trust-indicators" style="border-top: none; justify-content: center; margin-top: 24px;">
+                <div class="trust-indicators" style="border-top: none; justify-content: center; margin-top: 24px; color: white;">
                     <span class="trust-item">✅ Fast Shipping</span>
                     <span class="trust-item">✅ Secure Checkout</span>
                     <span class="trust-item">✅ 30-Day Returns</span>
@@ -1087,11 +1132,11 @@
                 <a href="#">Contact Us</a>
                 <a href="#">FAQs</a>
             </div>
-            <div class="badges-center" style="background: transparent;">
-                <span class="badge">🛡️ SSL Encrypted</span>
-                <span class="badge">📦 Tracked Shipping</span>
-                <span class="badge">💰 Purchase Protection</span>
-                <span class="badge">⭐ Trustpilot 4.8/5</span>
+            <div class="footer-badges">
+                <span class="footer-badge">🛡️ SSL Encrypted</span>
+                <span class="footer-badge">📦 Tracked Shipping</span>
+                <span class="footer-badge">💰 Purchase Protection</span>
+                <span class="footer-badge">⭐ Trustpilot 4.8/5</span>
             </div>
             <div class="copyright">
                 <p>© 2025 Advanced Amino Formula™. All rights reserved.</p>
