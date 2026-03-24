@@ -46,8 +46,28 @@
         .hero { padding: 80px 0; background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%); }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .hero-visual { position: relative; text-align: center; }
-        .hero-visual img.product { width: 100%; max-width: 420px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); }
-        .guarantee-badge-img { position: absolute; top: 10px; right: 10%; width: 130px; z-index: 5; }
+        .hero-visual img.product { 
+            width: 100%; 
+            max-width: 420px; 
+            filter: drop-shadow(0 25px 35px -12px rgba(0,0,0,0.5)) drop-shadow(0 0 15px rgba(201,160,61,0.2));
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+        .hero-visual img.product:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 30px 45px -12px rgba(0,0,0,0.6)) drop-shadow(0 0 20px rgba(201,160,61,0.3));
+        }
+        .guarantee-badge-img { 
+            position: absolute; 
+            top: 10px; 
+            right: 10%; 
+            width: 130px; 
+            z-index: 5;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            transition: transform 0.3s ease;
+        }
+        .guarantee-badge-img:hover {
+            transform: scale(1.05);
+        }
         .hero-content h1 { font-size: 48px; line-height: 1.1; margin-bottom: 25px; color: var(--text-white); }
         .hero-content h1 span { font-style: italic; color: var(--accent-gold); }
         .hero-content p.subtitle { font-size: 19px; color: rgba(255,255,255,0.9); margin-bottom: 35px; }
@@ -71,7 +91,18 @@
         .pricing-section { padding: 80px 0; background: var(--blue-light); }
         .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; color: var(--text-dark); }
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .price-card { background: var(--blue-card); border: 1px solid #cbdbe0; border-radius: 24px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .price-card { 
+            background: var(--blue-card); 
+            border: 1px solid #cbdbe0; 
+            border-radius: 24px; 
+            padding: 40px 20px; 
+            text-align: center; 
+            transition: 0.3s; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
         .price-card:hover { transform: translateY(-8px); border-color: var(--accent-gold); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15); background: #ffffff; }
         .price-card.featured { border: 2px solid var(--primary-orange); transform: scale(1.05); background: #ffffff; box-shadow: 0 20px 35px -12px rgba(230,126,34,0.2); }
         .best-value-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-orange); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
@@ -86,6 +117,31 @@
         .free-shipping { color: #2c7a4d; font-size: 12px; margin-top: 8px; font-weight: 600; }
         .price-card .cta-button { background: var(--primary-orange); color: white; padding: 14px 30px; font-size: 16px; margin-top: 15px; }
         .price-card .cta-button:hover { background: var(--primary-hover); }
+
+        /* Estilos para as imagens dos frascos nos cards */
+        .bottle-img {
+            width: 140px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 15px 20px -8px rgba(0,0,0,0.2));
+            transition: all 0.4s ease;
+        }
+        .price-card:hover .bottle-img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 20px 25px -8px rgba(0,0,0,0.3));
+        }
+        .bottle-group {
+            position: relative;
+            display: inline-block;
+        }
+        .bottle-group .bottle-img {
+            display: inline-block;
+        }
+        .bottle-group.multi .bottle-img {
+            margin: 0 -10px;
+            width: 100px;
+        }
 
         /* --- TESTIMONIALS --- */
         .testimonials-section { padding: 80px 0; background: var(--bg-dark); }
@@ -187,8 +243,8 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-visual">
-                    <img src="https://www.advancedbionutritionals.com/images/100-percent-guarantee-badge.png" class="guarantee-badge-img" alt="100% Guarantee">
-                    <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" class="product" alt="Advanced Amino Formula">
+                    <img src="https://www.advancedbionutritionals.com/images/100-percent-guarantee-badge.png" class="guarantee-badge-img" alt="100% Guarantee" onerror="this.src='https://placehold.co/130x130/e67e22/white?text=100%25+Guarantee'">
+                    <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" class="product" alt="Advanced Amino Formula" onerror="this.src='https://placehold.co/420x420/0a2f44/c9a03d?text=Advanced+Amino'">
                 </div>
                 <div class="hero-content">
                     <h1>"It Feels Like My <span>Muscles Are Waking Up</span> and Working" – Jacqui</h1>
@@ -228,12 +284,14 @@
         </div>
     </section>
 
-    <!-- PRICING SECTION - AZUL CLARO -->
+    <!-- PRICING SECTION - COM IMAGENS DOS FRASCOS MELHORADAS -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title">Select Your Savings Below</h2>
             <div class="pricing-grid">
+                <!-- 1 Bottle -->
                 <div class="price-card">
+                    <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" alt="1 Bottle" onerror="this.src='https://placehold.co/140x140/0a2f44/c9a03d?text=1+Bottle'">
                     <h3>1 Bottle</h3>
                     <p>30-Day Supply</p>
                     <div class="price-main">$39.95 <span>/ea</span></div>
@@ -245,8 +303,16 @@
                         <i class="fab fa-cc-discover"></i>
                     </div>
                 </div>
+
+                <!-- 6 Bottles - Best Value -->
                 <div class="price-card featured">
                     <div class="best-value-tag">⭐ Best Value</div>
+                    <div class="bottle-group multi" style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 85px;" alt="Bottle" onerror="this.src='https://placehold.co/85x85/0a2f44/c9a03d?text=Bottle'">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 85px;" alt="Bottle" onerror="this.src='https://placehold.co/85x85/0a2f44/c9a03d?text=Bottle'">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 85px;" alt="Bottle" onerror="this.src='https://placehold.co/85x85/0a2f44/c9a03d?text=Bottle'">
+                        <span style="color: var(--primary-orange); font-weight: bold; font-size: 20px;">+3</span>
+                    </div>
                     <h3>6 Bottles</h3>
                     <p>180-Day Supply</p>
                     <div class="price-main">$33.25 <span>/ea</span></div>
@@ -260,7 +326,14 @@
                         <i class="fab fa-cc-discover"></i>
                     </div>
                 </div>
+
+                <!-- 3 Bottles -->
                 <div class="price-card">
+                    <div class="bottle-group multi" style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 95px;" alt="Bottle" onerror="this.src='https://placehold.co/95x95/0a2f44/c9a03d?text=Bottle'">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 95px;" alt="Bottle" onerror="this.src='https://placehold.co/95x95/0a2f44/c9a03d?text=Bottle'">
+                        <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-small.png" class="bottle-img" style="width: 95px;" alt="Bottle" onerror="this.src='https://placehold.co/95x95/0a2f44/c9a03d?text=Bottle'">
+                    </div>
                     <h3>3 Bottles</h3>
                     <p>90-Day Supply</p>
                     <div class="price-main">$35.95 <span>/ea</span></div>
@@ -438,7 +511,7 @@
         </div>
     </section>
 
-    <!-- GUARANTEE SECTION - AZUL ESCURO -->
+    <!-- GUARANTEE SECTION -->
     <section class="guarantee-section">
         <div class="container">
             <div class="guarantee-box">
@@ -449,7 +522,7 @@
         </div>
     </section>
 
-    <!-- FOOTER - AZUL ESCURO -->
+    <!-- FOOTER -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
