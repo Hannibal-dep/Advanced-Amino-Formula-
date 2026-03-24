@@ -20,6 +20,8 @@
             --text-white: #ffffff;
             --text-gray: rgba(255, 255, 255, 0.8);
             --white-pure: #ffffff;
+            --text-dark: #1a2c3e;
+            --text-dark-gray: #4a5568;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,14 +41,14 @@
         .nav-links a:hover { color: var(--accent-gold); }
 
         /* --- HERO --- */
-        .hero { padding: 80px 0; }
+        .hero { padding: 80px 0; background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%); }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .hero-visual { position: relative; text-align: center; }
         .hero-visual img.product { width: 100%; max-width: 420px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); }
         .guarantee-badge-img { position: absolute; top: 10px; right: 10%; width: 130px; z-index: 5; }
-        .hero-content h1 { font-size: 48px; line-height: 1.1; margin-bottom: 25px; }
+        .hero-content h1 { font-size: 48px; line-height: 1.1; margin-bottom: 25px; color: var(--white-pure); }
         .hero-content h1 span { font-style: italic; color: var(--accent-gold); }
-        .hero-content p.subtitle { font-size: 19px; color: var(--text-gray); margin-bottom: 35px; }
+        .hero-content p.subtitle { font-size: 19px; color: rgba(255,255,255,0.9); margin-bottom: 35px; }
 
         /* --- BUTTONS --- */
         .cta-button { background: var(--primary-orange); color: white; padding: 18px 45px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
@@ -63,23 +65,25 @@
         .seal-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; color: var(--white-pure); }
         .seal-card p { font-size: 13px; color: var(--text-gray); }
 
-        /* --- PRICING --- */
-        .pricing-section { padding: 80px 0; background: #060e17; }
-        .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; color: var(--white-pure); }
+        /* --- PRICING SECTION - FUNDO BRANCO --- */
+        .pricing-section { padding: 80px 0; background: var(--white-pure); }
+        .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; color: var(--text-dark); }
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .price-card { background: var(--bg-card); border: 2px solid #1a2a3a; border-radius: 20px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; display: flex; flex-direction: column; }
-        .price-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); background: #0f1a28; }
-        .price-card.featured { border-color: var(--primary-orange); transform: scale(1.05); background: #0a1b2b; }
+        .price-card { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .price-card:hover { transform: translateY(-8px); border-color: var(--accent-gold); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15); }
+        .price-card.featured { border: 2px solid var(--primary-orange); transform: scale(1.05); background: #ffffff; box-shadow: 0 20px 35px -12px rgba(230,126,34,0.2); }
         .best-value-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-orange); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
-        .price-main { font-size: 48px; font-weight: 800; color: var(--accent-gold); margin: 20px 0; }
-        .price-main span { font-size: 18px; color: var(--text-gray); }
-        .price-card h3 { color: var(--white-pure); font-size: 24px; }
-        .price-card p { color: var(--text-gray); }
+        .price-card h3 { color: var(--text-dark); font-size: 24px; font-weight: 700; font-family: 'Inter', sans-serif; }
+        .price-card p { color: var(--text-dark-gray); font-size: 14px; }
+        .price-main { font-size: 48px; font-weight: 800; color: var(--primary-orange); margin: 20px 0; }
+        .price-main span { font-size: 18px; color: var(--text-dark-gray); }
         .payment-icons-small { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
-        .payment-icons-small i { font-size: 24px; color: var(--text-gray); transition: 0.3s; }
+        .payment-icons-small i { font-size: 24px; color: #6b7280; transition: 0.3s; }
         .payment-icons-small i:hover { color: var(--accent-gold); }
-        .instant-savings { background: rgba(201, 160, 61, 0.1); padding: 6px 12px; border-radius: 20px; font-size: 12px; color: var(--accent-gold); display: inline-block; margin-top: 10px; }
-        .free-shipping { color: #2ecc71; font-size: 12px; margin-top: 8px; }
+        .instant-savings { background: #fef3e2; padding: 6px 12px; border-radius: 20px; font-size: 12px; color: var(--primary-orange); display: inline-block; margin-top: 10px; font-weight: 600; }
+        .free-shipping { color: #2c7a4d; font-size: 12px; margin-top: 8px; font-weight: 600; }
+        .price-card .cta-button { background: var(--primary-orange); color: white; padding: 14px 30px; font-size: 16px; margin-top: 15px; }
+        .price-card .cta-button:hover { background: var(--primary-hover); }
 
         /* --- TESTIMONIALS --- */
         .testimonials-section { padding: 80px 0; background: var(--bg-dark); }
@@ -133,23 +137,23 @@
         .guarantee-box h2 { font-size: 32px; margin-bottom: 20px; color: var(--white-pure); }
         .guarantee-box p { color: var(--text-gray); }
 
-        /* --- FOOTER & COMPLIANCE --- */
-        .main-footer { padding: 80px 0 40px; background: #02060a; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: var(--text-gray); }
+        /* --- FOOTER - FUNDO BRANCO --- */
+        .main-footer { padding: 80px 0 40px; background: var(--white-pure); border-top: 1px solid #e2e8f0; font-size: 13px; color: var(--text-dark-gray); }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-gray); text-decoration: none; transition: 0.3s; }
-        .footer-links a:hover { color: var(--accent-gold); }
-        .compliance-text { max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center; }
-        .fda-disclaimer { border: 1px solid rgba(255,255,255,0.1); padding: 20px; margin-top: 30px; border-radius: 10px; background: rgba(255,255,255,0.02); }
-        .footer-badges { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 30px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .footer-links a { color: var(--text-dark-gray); text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: var(--primary-orange); }
+        .compliance-text { max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center; color: var(--text-dark-gray); }
+        .fda-disclaimer { border: 1px solid #e2e8f0; padding: 20px; margin-top: 30px; border-radius: 10px; background: #f8f9fa; color: var(--text-dark-gray); }
+        .footer-badges { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 30px; padding: 20px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
         .badge-norton, .badge-bbb { display: flex; align-items: center; gap: 10px; }
-        .badge-norton i, .badge-bbb i { font-size: 28px; color: var(--accent-gold); }
-        .badge-norton span, .badge-bbb span { font-size: 11px; font-weight: 500; color: var(--text-gray); }
+        .badge-norton i, .badge-bbb i { font-size: 28px; color: var(--primary-orange); }
+        .badge-norton span, .badge-bbb span { font-size: 11px; font-weight: 500; color: var(--text-dark-gray); }
         .payment-icons-footer { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; margin: 30px 0; }
-        .payment-icons-footer i { font-size: 32px; color: var(--text-gray); transition: 0.3s; }
-        .payment-icons-footer i:hover { color: var(--accent-gold); }
-        .digistore-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); padding: 6px 16px; border-radius: 50px; }
-        .digistore-badge i { font-size: 16px; color: var(--accent-gold); }
-        .digistore-badge span { font-size: 11px; font-weight: 600; color: var(--text-gray); }
+        .payment-icons-footer i { font-size: 32px; color: #6b7280; transition: 0.3s; }
+        .payment-icons-footer i:hover { color: var(--primary-orange); }
+        .digistore-badge { display: flex; align-items: center; gap: 8px; background: #f8f9fa; padding: 6px 16px; border-radius: 50px; border: 1px solid #e2e8f0; }
+        .digistore-badge i { font-size: 16px; color: var(--primary-orange); }
+        .digistore-badge span { font-size: 11px; font-weight: 600; color: var(--text-dark-gray); }
 
         /* --- ACCESSIBILITY --- */
         .acc-btn { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 999; cursor: pointer; transition: 0.3s; }
@@ -222,109 +226,7 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION - PRIMEIRA LINHA -->
-    <section class="testimonials-section" id="testimonials">
-        <div class="container">
-            <div style="text-align: center;">
-                <div class="live-activity">
-                    <div class="pulse"></div>
-                    <span><i class="fas fa-shopping-cart"></i> 12 people bought in the last hour</span>
-                </div>
-            </div>
-            <h2 class="section-title">Real Results from Real Customers</h2>
-            <div class="review-disclaimer">
-                <i class="fas fa-info-circle"></i> Above are actual reviews from our customers. These customer's statements may not reflect the typical purchaser's experience. Your results may vary.
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-profile">
-                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="George R.">
-                        <div class="profile-info"><h4>George R.</h4><p>Age 71 | Ohio, USA</p></div>
-                    </div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"I was struggling to carry groceries. After 3 weeks of Advanced Amino, I feel a huge difference in my grip strength and endurance. My energy levels are through the roof!"</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-profile">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah L.">
-                        <div class="profile-info"><h4>Sarah L.</h4><p>Age 45 | London, UK</p></div>
-                    </div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"My focus at work is sharp, and I don't feel that afternoon energy crash anymore. My brain feels 'plugged in' again! I'm more productive than ever."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-profile">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Margaret T.">
-                        <div class="profile-info"><h4>Margaret T.</h4><p>Age 68 | Florida, USA</p></div>
-                    </div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Advanced Amino has dramatically speeded up my muscle recovery time after gardening. I feel stronger than I have in years! My friends are asking what my secret is."</p>
-                </div>
-            </div>
-
-            <!-- SEGUNDA LINHA DE DEPOIMENTOS (MAIS PROVAS SOCIAIS) -->
-            <div class="testimonials-row-2">
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David C.">
-                            <div class="profile-info"><h4>David C.</h4><p>Age 38 | Texas, USA</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"As a busy executive, mental clarity is everything. This supplement gave me back my sharpness and focus. I'm closing more deals and feeling less stressed."</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Elena R.">
-                            <div class="profile-info"><h4>Elena R.</h4><p>Age 52 | Madrid, Spain</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"I was losing muscle and feeling weak. After 2 months on Advanced Amino, I'm back to my yoga routine and feeling stronger than ever. My memory has improved too!"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Michael K.">
-                            <div class="profile-info"><h4>Michael K.</h4><p>Age 63 | Toronto, Canada</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"I was skeptical at first, but this product delivers. My energy is up, my mind is clear, and I'm hitting the gym harder than I have in 10 years. Highly recommend!"</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TERCEIRA LINHA DE DEPOIMENTOS -->
-            <div class="testimonials-row-2">
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Patricia S.">
-                            <div class="profile-info"><h4>Patricia S.</h4><p>Age 59 | Lisbon, Portugal</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"I was struggling with brain fog and low energy. After just 2 weeks, I felt like a new person! My memory is sharper and I have energy to play with my grandkids."</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James W.">
-                            <div class="profile-info"><h4>James W.</h4><p>Age 49 | Sydney, Australia</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"I've tried many supplements, but this one actually works. My workouts are more productive, my mind is clearer, and I feel 10 years younger. Game changer!"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-profile">
-                            <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="Amanda L.">
-                            <div class="profile-info"><h4>Amanda L.</h4><p>Age 34 | New York, USA</p></div>
-                        </div>
-                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="testimonial-text">"As a busy mom of three, I need all the energy I can get. Advanced Amino gave me back my mental clarity and stamina. I'm more present with my kids and crushing it at work!"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING SECTION -->
+    <!-- PRICING SECTION - FUNDO BRANCO -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title">Select Your Savings Below</h2>
@@ -374,10 +276,110 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div style="text-align: center;">
+                <div class="live-activity">
+                    <div class="pulse"></div>
+                    <span><i class="fas fa-shopping-cart"></i> 12 people bought in the last hour</span>
+                </div>
+            </div>
+            <h2 class="section-title" style="color: var(--white-pure);">Real Results from Real Customers</h2>
+            <div class="review-disclaimer">
+                <i class="fas fa-info-circle"></i> Above are actual reviews from our customers. These customer's statements may not reflect the typical purchaser's experience. Your results may vary.
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="George R.">
+                        <div class="profile-info"><h4>George R.</h4><p>Age 71 | Ohio, USA</p></div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"I was struggling to carry groceries. After 3 weeks of Advanced Amino, I feel a huge difference in my grip strength and endurance. My energy levels are through the roof!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah L.">
+                        <div class="profile-info"><h4>Sarah L.</h4><p>Age 45 | London, UK</p></div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"My focus at work is sharp, and I don't feel that afternoon energy crash anymore. My brain feels 'plugged in' again! I'm more productive than ever."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-profile">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Margaret T.">
+                        <div class="profile-info"><h4>Margaret T.</h4><p>Age 68 | Florida, USA</p></div>
+                    </div>
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Advanced Amino has dramatically speeded up my muscle recovery time after gardening. I feel stronger than I have in years! My friends are asking what my secret is."</p>
+                </div>
+            </div>
+
+            <div class="testimonials-row-2">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David C.">
+                            <div class="profile-info"><h4>David C.</h4><p>Age 38 | Texas, USA</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"As a busy executive, mental clarity is everything. This supplement gave me back my sharpness and focus. I'm closing more deals and feeling less stressed."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Elena R.">
+                            <div class="profile-info"><h4>Elena R.</h4><p>Age 52 | Madrid, Spain</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"I was losing muscle and feeling weak. After 2 months on Advanced Amino, I'm back to my yoga routine and feeling stronger than ever. My memory has improved too!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Michael K.">
+                            <div class="profile-info"><h4>Michael K.</h4><p>Age 63 | Toronto, Canada</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"I was skeptical at first, but this product delivers. My energy is up, my mind is clear, and I'm hitting the gym harder than I have in 10 years. Highly recommend!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-row-2">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Patricia S.">
+                            <div class="profile-info"><h4>Patricia S.</h4><p>Age 59 | Lisbon, Portugal</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"I was struggling with brain fog and low energy. After just 2 weeks, I felt like a new person! My memory is sharper and I have energy to play with my grandkids."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James W.">
+                            <div class="profile-info"><h4>James W.</h4><p>Age 49 | Sydney, Australia</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"I've tried many supplements, but this one actually works. My workouts are more productive, my mind is clearer, and I feel 10 years younger. Game changer!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="Amanda L.">
+                            <div class="profile-info"><h4>Amanda L.</h4><p>Age 34 | New York, USA</p></div>
+                        </div>
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testimonial-text">"As a busy mom of three, I need all the energy I can get. Advanced Amino gave me back my mental clarity and stamina. I'm more present with my kids and crushing it at work!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- INGREDIENTS SECTION -->
     <section class="ingredients-section">
         <div class="container">
-            <h2 class="section-title">Premium Ingredients Backed by Science</h2>
+            <h2 class="section-title" style="color: var(--white-pure);">Premium Ingredients Backed by Science</h2>
             <div class="ingredients-grid">
                 <div class="ingredient-card">
                     <div class="ingredient-icon">💪</div>
@@ -406,7 +408,7 @@
     <!-- PROBLEM/SOLUTION SECTION -->
     <section class="problem-solution-section">
         <div class="container">
-            <h2 class="section-title">Is Your Brain & Body Telling You Something?</h2>
+            <h2 class="section-title" style="color: var(--white-pure);">Is Your Brain & Body Telling You Something?</h2>
             <div class="problem-solution">
                 <div class="problem-card">
                     <h3><i class="fas fa-exclamation-triangle"></i> Signs You Need Support</h3>
@@ -445,7 +447,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER - FUNDO BRANCO -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
