@@ -19,9 +19,11 @@
             --accent-gold: #c9a03d;
             --text-white: #ffffff;
             --text-gray: rgba(255, 255, 255, 0.8);
-            --white-pure: #ffffff;
-            --text-dark: #1a2c3e;
-            --text-dark-gray: #4a5568;
+            --blue-light: #e6f0fa;
+            --blue-soft: #f0f5fc;
+            --blue-card: #f5f9ff;
+            --text-dark: #1a3a4f;
+            --text-dark-gray: #2c4a6e;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,7 +48,7 @@
         .hero-visual { position: relative; text-align: center; }
         .hero-visual img.product { width: 100%; max-width: 420px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); }
         .guarantee-badge-img { position: absolute; top: 10px; right: 10%; width: 130px; z-index: 5; }
-        .hero-content h1 { font-size: 48px; line-height: 1.1; margin-bottom: 25px; color: var(--white-pure); }
+        .hero-content h1 { font-size: 48px; line-height: 1.1; margin-bottom: 25px; color: var(--text-white); }
         .hero-content h1 span { font-style: italic; color: var(--accent-gold); }
         .hero-content p.subtitle { font-size: 19px; color: rgba(255,255,255,0.9); margin-bottom: 35px; }
 
@@ -56,21 +58,21 @@
 
         /* --- TRUST SEALS SECTION --- */
         .trust-seals { padding: 60px 0; background: #060e17; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .trust-seals h2 { text-align: center; font-size: 32px; margin-bottom: 50px; color: var(--white-pure); }
+        .trust-seals h2 { text-align: center; font-size: 32px; margin-bottom: 50px; color: var(--text-white); }
         .seals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
         .seal-card { text-align: center; padding: 20px; background: var(--bg-card); border-radius: 20px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
         .seal-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); background: #0f1a28; }
         .seal-icon { width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
         .seal-icon i { font-size: 40px; color: var(--accent-gold); }
-        .seal-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; color: var(--white-pure); }
+        .seal-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; color: var(--text-white); }
         .seal-card p { font-size: 13px; color: var(--text-gray); }
 
-        /* --- PRICING SECTION - FUNDO BRANCO --- */
-        .pricing-section { padding: 80px 0; background: var(--white-pure); }
+        /* --- PRICING SECTION - AZUL CLARO --- */
+        .pricing-section { padding: 80px 0; background: var(--blue-light); }
         .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; color: var(--text-dark); }
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .price-card { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .price-card:hover { transform: translateY(-8px); border-color: var(--accent-gold); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15); }
+        .price-card { background: var(--blue-card); border: 1px solid #cbdbe0; border-radius: 24px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .price-card:hover { transform: translateY(-8px); border-color: var(--accent-gold); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15); background: #ffffff; }
         .price-card.featured { border: 2px solid var(--primary-orange); transform: scale(1.05); background: #ffffff; box-shadow: 0 20px 35px -12px rgba(230,126,34,0.2); }
         .best-value-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-orange); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
         .price-card h3 { color: var(--text-dark); font-size: 24px; font-weight: 700; font-family: 'Inter', sans-serif; }
@@ -94,7 +96,7 @@
         .testimonial-profile img { width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--accent-gold); object-fit: cover; }
         .testimonial-stars { color: var(--accent-gold); margin-bottom: 15px; font-size: 14px; }
         .testimonial-text { font-size: 15px; color: var(--text-gray); line-height: 1.7; font-style: italic; }
-        .profile-info h4 { color: var(--white-pure); font-size: 18px; }
+        .profile-info h4 { color: var(--text-white); font-size: 18px; }
         .profile-info p { color: var(--text-gray); font-size: 12px; }
 
         /* --- SECOND TESTIMONIALS ROW --- */
@@ -113,7 +115,7 @@
         .ingredient-card { text-align: center; padding: 30px 20px; background: var(--bg-card); border-radius: 20px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
         .ingredient-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); background: #0f1a28; }
         .ingredient-icon { font-size: 48px; margin-bottom: 15px; }
-        .ingredient-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; color: var(--white-pure); }
+        .ingredient-card h3 { font-family: 'Inter', sans-serif; font-size: 18px; margin-bottom: 10px; color: var(--text-white); }
         .ingredient-card p { font-size: 13px; color: var(--text-gray); }
 
         /* --- PROBLEM/SOLUTION SECTION --- */
@@ -134,24 +136,24 @@
         .guarantee-box { text-align: center; background: var(--bg-card); border-radius: 30px; padding: 50px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
         .guarantee-box:hover { transform: translateY(-5px); border-color: var(--accent-gold); background: #0f1a28; }
         .guarantee-icon { font-size: 64px; margin-bottom: 20px; color: var(--accent-gold); }
-        .guarantee-box h2 { font-size: 32px; margin-bottom: 20px; color: var(--white-pure); }
+        .guarantee-box h2 { font-size: 32px; margin-bottom: 20px; color: var(--text-white); }
         .guarantee-box p { color: var(--text-gray); }
 
-        /* --- FOOTER - FUNDO BRANCO --- */
-        .main-footer { padding: 80px 0 40px; background: var(--white-pure); border-top: 1px solid #e2e8f0; font-size: 13px; color: var(--text-dark-gray); }
+        /* --- FOOTER - AZUL CLARO --- */
+        .main-footer { padding: 80px 0 40px; background: var(--blue-light); border-top: 1px solid #cbdbe0; font-size: 13px; color: var(--text-dark-gray); }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
         .footer-links a { color: var(--text-dark-gray); text-decoration: none; transition: 0.3s; }
         .footer-links a:hover { color: var(--primary-orange); }
         .compliance-text { max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center; color: var(--text-dark-gray); }
-        .fda-disclaimer { border: 1px solid #e2e8f0; padding: 20px; margin-top: 30px; border-radius: 10px; background: #f8f9fa; color: var(--text-dark-gray); }
-        .footer-badges { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 30px; padding: 20px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+        .fda-disclaimer { border: 1px solid #cbdbe0; padding: 20px; margin-top: 30px; border-radius: 10px; background: var(--blue-soft); color: var(--text-dark-gray); }
+        .footer-badges { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 30px; padding: 20px 0; border-top: 1px solid #cbdbe0; border-bottom: 1px solid #cbdbe0; }
         .badge-norton, .badge-bbb { display: flex; align-items: center; gap: 10px; }
         .badge-norton i, .badge-bbb i { font-size: 28px; color: var(--primary-orange); }
         .badge-norton span, .badge-bbb span { font-size: 11px; font-weight: 500; color: var(--text-dark-gray); }
         .payment-icons-footer { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; margin: 30px 0; }
         .payment-icons-footer i { font-size: 32px; color: #6b7280; transition: 0.3s; }
         .payment-icons-footer i:hover { color: var(--primary-orange); }
-        .digistore-badge { display: flex; align-items: center; gap: 8px; background: #f8f9fa; padding: 6px 16px; border-radius: 50px; border: 1px solid #e2e8f0; }
+        .digistore-badge { display: flex; align-items: center; gap: 8px; background: var(--blue-soft); padding: 6px 16px; border-radius: 50px; border: 1px solid #cbdbe0; }
         .digistore-badge i { font-size: 16px; color: var(--primary-orange); }
         .digistore-badge span { font-size: 11px; font-weight: 600; color: var(--text-dark-gray); }
 
@@ -226,7 +228,7 @@
         </div>
     </section>
 
-    <!-- PRICING SECTION - FUNDO BRANCO -->
+    <!-- PRICING SECTION - AZUL CLARO -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title">Select Your Savings Below</h2>
@@ -285,7 +287,7 @@
                     <span><i class="fas fa-shopping-cart"></i> 12 people bought in the last hour</span>
                 </div>
             </div>
-            <h2 class="section-title" style="color: var(--white-pure);">Real Results from Real Customers</h2>
+            <h2 class="section-title" style="color: var(--text-white);">Real Results from Real Customers</h2>
             <div class="review-disclaimer">
                 <i class="fas fa-info-circle"></i> Above are actual reviews from our customers. These customer's statements may not reflect the typical purchaser's experience. Your results may vary.
             </div>
@@ -379,7 +381,7 @@
     <!-- INGREDIENTS SECTION -->
     <section class="ingredients-section">
         <div class="container">
-            <h2 class="section-title" style="color: var(--white-pure);">Premium Ingredients Backed by Science</h2>
+            <h2 class="section-title" style="color: var(--text-white);">Premium Ingredients Backed by Science</h2>
             <div class="ingredients-grid">
                 <div class="ingredient-card">
                     <div class="ingredient-icon">💪</div>
@@ -408,7 +410,7 @@
     <!-- PROBLEM/SOLUTION SECTION -->
     <section class="problem-solution-section">
         <div class="container">
-            <h2 class="section-title" style="color: var(--white-pure);">Is Your Brain & Body Telling You Something?</h2>
+            <h2 class="section-title" style="color: var(--text-white);">Is Your Brain & Body Telling You Something?</h2>
             <div class="problem-solution">
                 <div class="problem-card">
                     <h3><i class="fas fa-exclamation-triangle"></i> Signs You Need Support</h3>
@@ -447,7 +449,7 @@
         </div>
     </section>
 
-    <!-- FOOTER - FUNDO BRANCO -->
+    <!-- FOOTER - AZUL CLARO -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-links">
