@@ -18,7 +18,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f5f3ef;
+            background: #f8f6f2;
             color: #2c3e4e;
             line-height: 1.5;
             scroll-behavior: smooth;
@@ -42,14 +42,14 @@
             letter-spacing: -0.02em;
         }
 
-        /* Header */
+        /* Header - Azul Gradient */
         .header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8e2d4;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 50%, #0a2f44 100%);
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .header .container {
@@ -63,7 +63,7 @@
         .logo {
             font-size: 28px;
             font-weight: 600;
-            color: #0a2f44;
+            color: #ffffff;
             letter-spacing: -0.5px;
         }
 
@@ -80,10 +80,10 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #4a5568;
+            color: rgba(255, 255, 255, 0.85);
             font-size: 14px;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
             letter-spacing: 0.3px;
         }
 
@@ -95,7 +95,7 @@
             display: flex;
             gap: 24px;
             font-size: 13px;
-            color: #4a5568;
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .trust-badge span {
@@ -104,20 +104,25 @@
             gap: 6px;
         }
 
+        .trust-badge i {
+            color: #c9a03d;
+        }
+
         @media (max-width: 768px) {
             .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
             .trust-badge { font-size: 11px; gap: 16px; }
             .header .container { flex-direction: column; text-align: center; }
         }
 
-        /* Main */
+        /* Main - Começa com fundo branco */
         .main {
             padding: 60px 0 80px;
+            background: #ffffff;
         }
 
-        /* Hero Section */
+        /* Hero Section - Branca */
         .hero {
-            background: linear-gradient(135deg, #ffffff 0%, #fefaf5 100%);
+            background: #ffffff;
             border-radius: 32px;
             margin-bottom: 60px;
             padding: 56px 48px;
@@ -138,12 +143,12 @@
 
         .badge-top {
             display: inline-block;
-            background: #f4efe8;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%);
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 600;
-            color: #c9a03d;
+            color: #ffffff;
             margin-bottom: 24px;
         }
 
@@ -265,7 +270,7 @@
             width: 90px;
             height: 90px;
             margin: 0 auto 20px;
-            background: #f4efe8;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -275,7 +280,7 @@
 
         .seal-icon i {
             font-size: 42px;
-            color: #c9a03d;
+            color: #ffffff;
         }
 
         .seal-card h3 {
@@ -419,7 +424,7 @@
         }
 
         .pricing-cta {
-            background: #0a2f44;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%);
             color: white;
             padding: 14px 32px;
             border-radius: 50px;
@@ -468,19 +473,19 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #f4efe8;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%);
             padding: 8px 20px;
             border-radius: 100px;
             font-size: 12px;
             font-weight: 600;
-            color: #c9a03d;
+            color: #ffffff;
             margin-bottom: 32px;
         }
 
         .pulse {
             width: 8px;
             height: 8px;
-            background: #2c7a4d;
+            background: #c9a03d;
             border-radius: 50%;
             animation: pulse 1.5s infinite;
         }
@@ -691,7 +696,7 @@
         .guarantee-box {
             text-align: center;
             padding: 48px;
-            background: #fefaf5;
+            background: linear-gradient(135deg, #fefaf5 0%, #faf5ea 100%);
             border-radius: 28px;
             border: 1px solid #f0e9df;
         }
@@ -699,6 +704,7 @@
         .guarantee-icon {
             font-size: 56px;
             margin-bottom: 20px;
+            color: #c9a03d;
         }
 
         .guarantee-box h2 {
@@ -844,7 +850,7 @@
         }
 
         .countdown {
-            background: #f4efe8;
+            background: linear-gradient(135deg, #0a2f44 0%, #1a4a6e 100%);
             border-radius: 50px;
             padding: 10px 24px;
             display: inline-block;
@@ -854,7 +860,7 @@
         .countdown-text {
             font-size: 13px;
             font-weight: 600;
-            color: #c9a03d;
+            color: #ffffff;
         }
 
         .badges-center {
@@ -882,6 +888,7 @@
     </style>
 </head>
 <body>
+    <!-- Header - Azul Gradient -->
     <header class="header">
         <div class="container">
             <div class="logo">advanced bionutritionals<sup>®</sup></div>
@@ -893,16 +900,17 @@
                 <a href="#">Order Now</a>
             </div>
             <div class="trust-badge">
-                <span><i class="fas fa-star" style="color: #c9a03d; font-size: 12px;"></i> 4.8/5 (15,347 reviews)</span>
+                <span><i class="fas fa-star"></i> 4.8/5 (15,347 reviews)</span>
                 <span><i class="fas fa-truck"></i> Free Shipping on 3+</span>
                 <span><i class="fas fa-shield-alt"></i> 30-Day Guarantee</span>
             </div>
         </div>
     </header>
 
+    <!-- Main - Fundo Branco -->
     <main class="main">
         <div class="container">
-            <!-- Hero Section -->
+            <!-- Hero Section - Branca -->
             <div class="hero">
                 <div class="hero-content">
                     <div class="countdown">
@@ -1096,7 +1104,7 @@
         </div>
     </main>
 
-    <!-- Footer - Professional -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
