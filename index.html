@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Amino Formula | Performance & Recuperação</title>
+    <title>Advanced Amino Formula | Official Store</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
     <style>
         :root {
             --bg-dark: #040a12;
+            --bg-card: #08121d;
             --primary-orange: #e67e22;
             --primary-hover: #d35400;
             --accent-gold: #c9a03d;
@@ -21,199 +22,65 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* --- HEADER --- */
-        .header {
-            padding: 25px 0;
-            background: rgba(4, 10, 18, 0.98);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--text-white);
-            text-decoration: none;
-        }
-
+        .header { padding: 20px 0; background: rgba(4, 10, 18, 0.98); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: white; text-decoration: none; }
         .logo span { color: var(--accent-gold); font-size: 12px; vertical-align: top; }
-
         .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { 
-            color: var(--text-white); 
-            text-decoration: none; 
-            font-size: 14px; 
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent-gold); }
+        .nav-links a { color: white; text-decoration: none; font-size: 14px; transition: 0.3s; }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero { padding: 80px 0; }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero-visual {
-            position: relative;
-            text-align: center;
-        }
-
-        .hero-visual img.product {
-            width: 100%;
-            max-width: 420px;
-            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
-        }
-
-        .guarantee-badge-img {
-            position: absolute;
-            top: 10px;
-            right: 15%;
-            width: 120px;
-            z-index: 5;
-        }
-
-        .hero-content h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
-
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .hero-visual { position: relative; text-align: center; }
+        .hero-visual img.product { width: 100%; max-width: 420px; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5)); }
+        .guarantee-badge-img { position: absolute; top: 10px; right: 10%; width: 130px; z-index: 5; }
+        .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1.1; margin-bottom: 25px; }
         .hero-content h1 span { font-style: italic; color: var(--accent-gold); }
+        .hero-content p.subtitle { font-size: 19px; color: var(--text-gray); margin-bottom: 35px; }
 
-        .hero-content p.description {
-            font-size: 18px;
-            color: var(--text-gray);
-            margin-bottom: 35px;
-        }
+        /* --- PRICING SECTION --- */
+        .pricing-section { padding: 80px 0; background: #060e17; }
+        .section-title { text-align: center; font-size: 42px; margin-bottom: 50px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .price-card { background: var(--bg-card); border: 2px solid #1a2a3a; border-radius: 20px; padding: 40px 20px; text-align: center; transition: 0.3s; position: relative; }
+        .price-card.featured { border-color: var(--primary-orange); transform: scale(1.05); background: #0a1b2b; }
+        .best-value-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-orange); color: white; padding: 5px 20px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+        .price-card h3 { font-size: 24px; margin-bottom: 15px; }
+        .price-main { font-size: 48px; font-weight: 800; color: var(--accent-gold); margin: 20px 0; }
+        .price-main span { font-size: 18px; color: var(--text-gray); font-weight: 400; }
+        .price-total { font-size: 14px; color: var(--text-gray); margin-bottom: 25px; display: block; }
 
-        /* --- BOTÃO ESTILO OFICIAL --- */
-        .cta-button {
-            background: var(--primary-orange);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            display: inline-block;
-            transition: 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-        }
+        /* --- SUPPLEMENT FACTS --- */
+        .facts-section { padding: 80px 0; background: var(--bg-card); }
+        .facts-table { background: white; color: black; padding: 30px; border: 2px solid black; max-width: 500px; margin: 0 auto; }
+        .facts-header { border-bottom: 8px solid black; margin-bottom: 5px; }
+        .facts-header h2 { font-size: 32px; font-weight: 900; }
+        .facts-row { display: flex; justify-content: space-between; border-bottom: 1px solid black; padding: 5px 0; }
+        .bold { font-weight: 700; }
 
-        .cta-button:hover {
-            background: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.5);
-        }
+        /* --- BUTTONS --- */
+        .cta-button { background: var(--primary-orange); color: white; padding: 18px 45px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .cta-button:hover { background: var(--primary-hover); transform: translateY(-2px); }
 
-        /* --- SEÇÃO DE GARANTIA (OPÇÃO 2) --- */
-        .guarantee-section {
-            padding: 100px 0;
-            background: #08121d;
-        }
+        /* --- GUARANTEE --- */
+        .guarantee-section { padding: 100px 0; }
+        .guarantee-card { background: white; color: #040a12; padding: 60px; border-radius: 30px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .guarantee-icon-wrapper { position: relative; display: inline-block; margin-bottom: 25px; }
+        .guarantee-icon-wrapper i { font-size: 90px; color: #0a2f44; }
+        .guarantee-days { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -40%); font-weight: 800; font-size: 26px; color: var(--accent-gold); }
 
-        .guarantee-card {
-            background: var(--text-white);
-            color: #040a12;
-            padding: 60px;
-            border-radius: 30px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
+        /* --- ACCESSIBILITY --- */
+        .acc-btn { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--primary-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 999; }
 
-        .guarantee-icon-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-        .guarantee-icon-wrapper i {
-            font-size: 90px;
-            color: #0a2f44;
-        }
-
-        .guarantee-days {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -40%);
-            font-weight: 800;
-            font-size: 26px;
-            color: var(--accent-gold);
-        }
-
-        .guarantee-card h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .guarantee-card p {
-            font-size: 17px;
-            color: #4a5b68;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-
-        /* --- ACESSIBILIDADE FLUTUANTE --- */
-        .acc-btn {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary-orange);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            cursor: pointer;
-            z-index: 999;
-        }
-
-        /* --- RESPONSIVIDADE --- */
         @media (max-width: 992px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-content h1 { font-size: 38px; }
-            .guarantee-badge-img { right: 25%; width: 100px; }
-            .nav-links { display: none; }
+            .hero-grid, .pricing-grid { grid-template-columns: 1fr; }
+            .price-card.featured { transform: scale(1); }
         }
     </style>
 </head>
@@ -226,10 +93,9 @@
             <a href="#" class="logo">advanced bionutritionals<span>®</span></a>
             <nav class="nav-links">
                 <a href="#about">About</a>
-                <a href="#ingredients">Ingredients</a>
+                <a href="#pricing">Pricing</a>
                 <a href="#guarantee">Guarantee</a>
-                <a href="#faq">FAQ</a>
-                <a href="#order" class="cta-button" style="padding: 10px 25px; font-size: 14px;">Order Now</a>
+                <a href="#pricing" class="cta-button" style="padding: 10px 25px; font-size: 14px;">Order Now</a>
             </nav>
         </div>
     </header>
@@ -237,29 +103,62 @@
     <section class="hero">
         <div class="container">
             <div class="hero-grid">
-                
                 <div class="hero-visual">
-                    <img src="https://www.advancedbionutritionals.com/images/100-percent-guarantee-badge.png" class="guarantee-badge-img" alt="100% Garantia">
+                    <img src="https://www.advancedbionutritionals.com/images/100-percent-guarantee-badge.png" class="guarantee-badge-img" alt="100% Guarantee">
                     <img src="https://www.advancedbionutritionals.com/images/products/advanced-amino-large.png" class="product" alt="Advanced Amino Formula">
                 </div>
-
                 <div class="hero-content">
                     <h1>"It Feels Like My <span>Muscles Are Waking Up</span> and Working" – Jacqui</h1>
-                    <p class="description">
-                        Esta combinação de 8 aminoácidos essenciais fornece ao seu corpo os blocos de construção para produzir toda a proteína necessária para que você se sinta mais em forma, forte e jovem.
-                    </p>
-                    
-                    <a href="#order" class="cta-button">Order Now</a>
-                    
-                    <div style="margin-top: 25px; color: var(--accent-gold);">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+                    <p class="subtitle">This combination of 8 essential amino acids gives your body the building blocks to make all the protein it needs so you can feel fitter, stronger, and younger.</p>
+                    <a href="#pricing" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Select Your Savings Below</h2>
+            <div class="pricing-grid">
+                
+                <div class="price-card">
+                    <h3>1 Bottle</h3>
+                    <p>30-Day Supply</p>
+                    <div class="price-main">$39.95 <span>/ea</span></div>
+                    <span class="price-total">Total: $39.95</span>
+                    <a href="#" class="cta-button" style="padding: 12px 30px; font-size: 14px;">Add to Cart</a>
                 </div>
 
+                <div class="price-card featured">
+                    <div class="best-value-tag">Best Value</div>
+                    <h3>6 Bottles</h3>
+                    <p>180-Day Supply</p>
+                    <div class="price-main">$33.25 <span>/ea</span></div>
+                    <span class="price-total" style="color: var(--accent-gold); font-weight: 700;">You Save: $40.20</span>
+                    <a href="#" class="cta-button">Add to Cart</a>
+                    <p style="margin-top: 15px; font-size: 12px;">+ FREE SHIPPING</p>
+                </div>
+
+                <div class="price-card">
+                    <h3>3 Bottles</h3>
+                    <p>90-Day Supply</p>
+                    <div class="price-main">$35.95 <span>/ea</span></div>
+                    <span class="price-total">Total: $107.85</span>
+                    <a href="#" class="cta-button" style="padding: 12px 30px; font-size: 14px;">Add to Cart</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="facts-section">
+        <div class="container">
+            <div class="facts-table">
+                <div class="facts-header"><h2>Supplement Facts</h2><p>Serving Size: 5 Tablets</p></div>
+                <div class="facts-row bold" style="border-bottom: 4px solid black;"><span>Amount Per Serving</span><span>% DV</span></div>
+                <div class="facts-row"><span><strong>Advanced Amino Formula</strong></span><span><strong>5,000 mg</strong></span></div>
+                <div class="facts-row" style="font-size: 12px;"><span>L-Leucine, L-Valine, L-Isoleucine, L-Lysine, L-Phenylalanine, etc.</span><span>*</span></div>
+                <div class="facts-row bold"><span>* Daily Value not established</span><span></span></div>
             </div>
         </div>
     </section>
@@ -271,18 +170,16 @@
                     <i class="fas fa-shield-alt"></i>
                     <span class="guarantee-days">90</span>
                 </div>
-                <h2>Garantia de Satisfação de 90 Dias</h2>
-                <p>
-                    Você tem <strong>3 meses inteiros</strong> para testar o produto. Sinta a diferença na sua clareza mental e resistência muscular. Se por qualquer motivo você não estiver 100% satisfeito, basta devolver os frascos (mesmo vazios) e reembolsaremos cada centavo.
-                </p>
-                <p style="font-weight: 700; color: #0a2f44; margin-top: 10px;">Sem perguntas. Sem letras miúdas. Risco Zero.</p>
+                <h2>90-Day Satisfaction Guarantee</h2>
+                <p>If you don't feel stronger and more focused, return the bottles (even empty) for a full refund. No questions asked.</p>
+                <p style="font-weight: 800; color: #0a2f44;">Zero Risk. Pure Results.</p>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 50px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-        <p style="font-size: 13px; color: var(--text-gray);">© 2026 Advanced Bionutritionals. Todos os direitos reservados.</p>
+    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p style="font-size: 12px; color: var(--text-gray);">© 2026 Advanced Bionutritionals. All rights reserved.</p>
     </footer>
 
 </body>
-</html>      
+</html>
