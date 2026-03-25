@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Amino Formula | Official Store | Muscle & Mind Power</title>
     
+    <!-- Google tag (gtag.js) - Google Analytics 4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configuração do Google Analytics (GA4) - Substitua G-XXXXXXXXXX pelo seu ID
+        gtag('config', 'G-XXXXXXXXXX');
+
+        // Configuração do Google Ads (opcional) - Substitua AW-XXXXXXXXX pelo seu ID
+        gtag('config', 'AW-XXXXXXXXX');
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -12,7 +26,7 @@
 
     <style>
         :root {
-            --bg-dark blue: #040a12;
+            --bg-dark: #040a12;
             --bg-card: #08121d;
             --primary-orange: #e67e22;
             --primary-hover: #d35400;
@@ -182,7 +196,7 @@
         @media (max-width: 992px) {
             .hero-grid, .pricing-grid, .testimonials-grid, .seals-grid, .ingredients-grid, .problem-solution { grid-template-columns: 1fr; }
             .price-card.featured { transform: scale(1); }
-            .multi-bottle .bottle-img { width: 120px; } /* ajuste responsivo */
+            .multi-bottle .bottle-img { width: 120px; }
             .plus-badge { width: 45px; height: 45px; font-size: 20px; }
         }
     </style>
@@ -246,7 +260,7 @@
                     <h3>1 Bottle</h3>
                     <p>30-Day Supply</p>
                     <div class="price-main">$39.95 <span>/ea</span></div>
-                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
+                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button add-to-cart-btn" data-value="39.95">Add to Cart</a>
                     <div class="payment-icons-small"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i><i class="fab fa-cc-discover"></i></div>
                 </div>
 
@@ -262,7 +276,7 @@
                     <div class="price-main">$33.25 <span>/ea</span></div>
                     <div class="instant-savings"><i class="fas fa-tag"></i> Instant Savings: $40.20</div>
                     <div class="free-shipping"><i class="fas fa-truck"></i> FREE SHIPPING</div>
-                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
+                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button add-to-cart-btn" data-value="199.50">Add to Cart</a>
                     <div class="payment-icons-small"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i><i class="fab fa-cc-discover"></i></div>
                 </div>
 
@@ -276,7 +290,7 @@
                     <div class="price-main">$35.95 <span>/ea</span></div>
                     <div class="instant-savings"><i class="fas fa-tag"></i> Instant Savings: $12.00</div>
                     <div class="free-shipping"><i class="fas fa-truck"></i> FREE SHIPPING</div>
-                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button">Add to Cart</a>
+                    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=poleb22" class="cta-button add-to-cart-btn" data-value="107.85">Add to Cart</a>
                     <div class="payment-icons-small"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i><i class="fab fa-cc-discover"></i></div>
                 </div>
             </div>
@@ -454,5 +468,52 @@
         </div>
     </footer>
 
+    <script>
+        // Função para enviar eventos de conversão para Google Analytics e Google Ads
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                // Obter valor do produto a partir do atributo data-value
+                const value = parseFloat(this.getAttribute('data-value'));
+                const currency = 'USD';
+                
+                console.log('🛒 Click no botão Add to Cart - Valor: ' + value + ' ' + currency);
+                
+                // Google Analytics 4 (evento personalizado)
+                if (typeof gtag !== 'undefined') {
+                    // Evento de conversão para o Google Analytics (pode ser usado como objetivo)
+                    gtag('event', 'add_to_cart', {
+                        'currency': currency,
+                        'value': value,
+                        'items': [{
+                            'item_name': 'Advanced Amino Formula',
+                            'price': value,
+                            'quantity': 1
+                        }]
+                    });
+                    
+                    // Se você quiser disparar um evento de conversão do Google Ads (opcional)
+                    // Substitua AW-XXXXXXXXX/XXXXXXXX pelo seu ID de conversão e label
+                    // Exemplo:
+                    // gtag('event', 'conversion', {
+                    //     'send_to': 'AW-XXXXXXXXX/XXXXXXXX',
+                    //     'value': value,
+                    //     'currency': currency
+                    // });
+                }
+                
+                // (Opcional) Registrar também um evento no Facebook Pixel se tiver
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'AddToCart', {
+                        value: value,
+                        currency: currency
+                    });
+                }
+            });
+        });
+        
+        // Evento de visualização de página já é enviado automaticamente pelo gtag config.
+        // Adicione também um console.log para confirmar que a página foi carregada
+        console.log('✅ Landing page carregada com sucesso. GA4 e Google Ads configurados.');
+    </script>
 </body>
 </html>
