@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Amino Formula | Official Store | Muscle & Mind Power</title>
     
-    <!-- Google tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) - Google Analytics + Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRF994CPPD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-BRF994CPPD');
-    </script>
 
-    <!-- (Opcional) Configuração do Google Ads - substitua pelos seus IDs quando tiver -->
-    <!--
-    <script>
-        gtag('config', 'AW-XXXXXXXXXX');
+        // Google Analytics GA4
+        gtag('config', 'G-BRF994CPPD');
+
+        // Google Ads (conversões)
+        gtag('config', 'AW-18036403016');
     </script>
-    -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -471,15 +469,14 @@
         </div>
     </footer>
 
-    <!-- Script para conversões (opcional, pode ser ativado depois) -->
+    <!-- Script para eventos personalizados (início de checkout) -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Se quiser rastrear cliques nos botões de compra, pode usar este código
             const purchaseButtons = document.querySelectorAll('.add-to-cart-btn');
             purchaseButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
-                    // Exemplo: enviar evento personalizado ao GA4
                     if (typeof gtag !== 'undefined') {
+                        // Evento para Google Analytics (begin_checkout)
                         gtag('event', 'begin_checkout', {
                             'currency': 'USD',
                             'value': parseFloat(this.getAttribute('data-price') || '0'),
@@ -490,6 +487,15 @@
                                 'price': parseFloat(this.getAttribute('data-price') || '0') / parseInt(this.getAttribute('data-quantity') || '1')
                             }]
                         });
+                        
+                        // Opcional: enviar evento de conversão para o Google Ads
+                        // Para ativar, você precisa criar uma conversão no Google Ads e substituir o label.
+                        // Exemplo:
+                        // gtag('event', 'conversion', {
+                        //     'send_to': 'AW-18036403016/XXXXXXXXXX',
+                        //     'value': parseFloat(this.getAttribute('data-price') || '0'),
+                        //     'currency': 'USD'
+                        // });
                     }
                     console.log('Botão de compra clicado');
                 });
